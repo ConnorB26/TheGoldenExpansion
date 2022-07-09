@@ -38,23 +38,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 		oneLayerItem(ItemInit.GOLDEN_BEETROOT_SEEDS.get());
 		oneLayerItem(ItemInit.GOLDEN_MELON_SEEDS.get());
 		oneLayerItem(ItemInit.GOLDEN_PUMPKIN_SEEDS.get());
+		oneLayerItem(ItemInit.GOLDEN_POTATO.get());
 		
 		// Blocks
-		simpleBlockItem(BlockInit.GOLDEN_WHEAT.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_POTATOES.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_CARROTS.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_BEETROOTS.get().asItem());
-		simpleBlockItem(BlockInit.BLUEBERRY_BUSH.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_BLUEBERRY_BUSH.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_SWEET_BERRY_BUSH.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_MELON.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_MELON_STEM.get().asItem());
-		simpleBlockItem(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_PUMPKIN.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_PUMPKIN_STEM.get().asItem());
-		simpleBlockItem(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_SAPLING.get().asItem());
-		simpleBlockItem(BlockInit.POTTED_GOLDEN_SAPLING.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_LEAVES.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_LOG.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_WOOD.get().asItem());
@@ -63,12 +52,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleBlockItem(BlockInit.GOLDEN_PLANKS.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_STAIRS.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_SLAB.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_TRAPDOOR.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_PRESSURE_PLATE.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_FENCE_GATE.get().asItem());
 		
 		oneLayerItem(BlockInit.GOLDEN_SIGN.get().asItem());
 		oneLayerItem(BlockInit.GOLDEN_DOOR.get().asItem());
+		simpleBlockItem(BlockInit.GOLDEN_TRAPDOOR.get().asItem(), "_bottom");
 		simpleBlockItem(BlockInit.GOLDEN_BUTTON.get().asItem(), "_inventory");
 		simpleBlockItem(BlockInit.GOLDEN_FENCE.get().asItem(), "_inventory");
 		

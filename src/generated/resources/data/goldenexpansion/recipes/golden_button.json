@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "goldenexpansion:golden_planks"
+    }
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_button"
+  }
+}

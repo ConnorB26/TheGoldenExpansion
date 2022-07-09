@@ -12,20 +12,13 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class GoldenWheatBlock extends CropBlock
 {	
-	public int maxAge = 7;
-    public IntegerProperty age = BlockStateProperties.AGE_7;
-
+	public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
+	
 	public GoldenWheatBlock(Properties properties)
 	{
 		super(properties);
 	}
 
-	@Override
-	public int getMaxAge()
-	{
-		return maxAge;
-    }
-	
 	@Override
 	protected ItemLike getBaseSeedId()
 	{
@@ -33,9 +26,15 @@ public class GoldenWheatBlock extends CropBlock
     }
 	
 	@Override
+	public int getMaxAge()
+	{
+		return 7;
+    }
+	
+	@Override
 	public IntegerProperty getAgeProperty()
 	{
-        return age;
+        return AGE;
     }
 
     @Override

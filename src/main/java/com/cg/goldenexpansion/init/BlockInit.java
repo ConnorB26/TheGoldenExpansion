@@ -28,6 +28,7 @@ import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.StemBlock;
@@ -83,7 +84,7 @@ public class BlockInit
 	public static final RegistryObject<Block> GOLDEN_PLANKS = register("golden_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), goldenBlockItem());
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Block> GOLDEN_STAIRS = register("golden_stairs", () -> new StairBlock(GOLDEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_SLAB = register("golden_slab", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_SLAB = register("golden_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE = register("golden_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE_GATE = register("golden_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_DOOR = register("golden_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)), goldenBlockItem());

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "goldenexpansion:block/stripped_golden_log",
+    "side": "goldenexpansion:block/stripped_golden_log"
+  }
+}

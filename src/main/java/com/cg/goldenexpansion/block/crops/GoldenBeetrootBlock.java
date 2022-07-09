@@ -12,20 +12,13 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class GoldenBeetrootBlock extends CropBlock
 {	
-	public int maxAge = 3;
-    public IntegerProperty age = BlockStateProperties.AGE_3;
-
+	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+	
 	public GoldenBeetrootBlock(Properties properties)
 	{
 		super(properties);
 	}
 
-	@Override
-	public int getMaxAge()
-	{
-		return maxAge;
-    }
-	
 	@Override
 	protected ItemLike getBaseSeedId()
 	{
@@ -33,9 +26,15 @@ public class GoldenBeetrootBlock extends CropBlock
     }
 	
 	@Override
+	public int getMaxAge()
+	{
+		return 3;
+    }
+	
+	@Override
 	public IntegerProperty getAgeProperty()
 	{
-        return age;
+        return AGE;
     }
 
     @Override

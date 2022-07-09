@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "key": {
+    "s": {
+      "item": "goldenexpansion:golden_stick"
+    },
+    "x": {
+      "item": "goldenexpansion:golden_planks"
+    }
+  },
+  "pattern": [
+    "xsx",
+    "xsx"
+  ],
+  "result": {
+    "count": 3,
+    "item": "goldenexpansion:golden_fence"
+  }
+}

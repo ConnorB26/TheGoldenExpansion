@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "key": {
+    "x": {
+      "item": "goldenexpansion:golden_planks"
+    }
+  },
+  "pattern": [
+    "xxx"
+  ],
+  "result": {
+    "count": 6,
+    "item": "goldenexpansion:golden_slab"
+  }
+}

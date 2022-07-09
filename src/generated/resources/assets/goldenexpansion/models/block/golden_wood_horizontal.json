@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "goldenexpansion:block/golden_log",
+    "side": "goldenexpansion:block/golden_log"
+  }
+}

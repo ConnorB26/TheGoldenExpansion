@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": {
+      "item": "goldenexpansion:golden_wheat"
+    }
+  },
+  "pattern": [
+    "xxx"
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_bread"
+  }
+}

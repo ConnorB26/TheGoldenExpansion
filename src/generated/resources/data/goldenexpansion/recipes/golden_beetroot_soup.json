@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "goldenexpansion:golden_beetroot"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_beetroot_soup"
+  }
+}

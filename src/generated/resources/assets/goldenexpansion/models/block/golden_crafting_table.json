@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "goldenexpansion:block/golden_planks",
+    "east": "goldenexpansion:block/golden_crafting_table_side",
+    "north": "goldenexpansion:block/golden_crafting_table_front",
+    "particle": "goldenexpansion:block/golden_crafting_table_front",
+    "south": "goldenexpansion:block/golden_crafting_table_side",
+    "up": "goldenexpansion:block/golden_crafting_table_top",
+    "west": "goldenexpansion:block/golden_crafting_table_top"
+  }
+}

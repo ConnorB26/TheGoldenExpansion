@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldenexpansion:stripped_golden_log"
+        }
+      ],
+      "name": "stripped_golden_log",
+      "rolls": 1.0
+    }
+  ]
+}

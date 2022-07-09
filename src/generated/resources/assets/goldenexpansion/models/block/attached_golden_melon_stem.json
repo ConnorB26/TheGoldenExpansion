@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/stem_fruit",
+  "textures": {
+    "stem": "goldenexpansion:block/golden_melon_stem",
+    "upperstem": "goldenexpansion:block/attached_golden_melon_stem"
+  }
+}

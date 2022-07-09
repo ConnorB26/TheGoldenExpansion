@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "key": {
+    "x": {
+      "item": "goldenexpansion:stripped_golden_log"
+    }
+  },
+  "pattern": [
+    "xx",
+    "xx"
+  ],
+  "result": {
+    "count": 3,
+    "item": "goldenexpansion:stripped_golden_wood"
+  }
+}

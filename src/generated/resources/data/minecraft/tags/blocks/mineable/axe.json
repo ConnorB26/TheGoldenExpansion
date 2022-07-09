@@ -1,0 +1,22 @@
+{
+  "values": [
+    "goldenexpansion:golden_melon",
+    "goldenexpansion:golden_pumpkin",
+    "goldenexpansion:golden_log",
+    "goldenexpansion:golden_wood",
+    "goldenexpansion:stripped_golden_log",
+    "goldenexpansion:stripped_golden_wood",
+    "goldenexpansion:golden_planks",
+    "goldenexpansion:golden_stairs",
+    "goldenexpansion:golden_slab",
+    "goldenexpansion:golden_fence",
+    "goldenexpansion:golden_fence_gate",
+    "goldenexpansion:golden_sign",
+    "goldenexpansion:golden_wall_sign",
+    "goldenexpansion:golden_door",
+    "goldenexpansion:golden_trapdoor",
+    "goldenexpansion:golden_pressure_plate",
+    "goldenexpansion:golden_button",
+    "goldenexpansion:golden_crafting_table"
+  ]
+}

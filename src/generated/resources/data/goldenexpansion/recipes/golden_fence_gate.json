@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "goldenexpansion:golden_stick"
+    },
+    "x": {
+      "item": "goldenexpansion:golden_planks"
+    }
+  },
+  "pattern": [
+    "sxs",
+    "sxs"
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_fence_gate"
+  }
+}

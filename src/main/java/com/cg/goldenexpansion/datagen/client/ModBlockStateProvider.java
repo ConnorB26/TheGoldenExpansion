@@ -1,6 +1,10 @@
 package com.cg.goldenexpansion.datagen.client;
 
 import com.cg.goldenexpansion.GoldenExpansion;
+import com.cg.goldenexpansion.block.crops.GoldenBeetrootBlock;
+import com.cg.goldenexpansion.block.crops.GoldenCarrotBlock;
+import com.cg.goldenexpansion.block.crops.GoldenPotatoBlock;
+import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
 import com.cg.goldenexpansion.init.BlockInit;
 import com.google.common.base.Function;
 
@@ -38,10 +42,10 @@ public class ModBlockStateProvider extends BlockStateProvider
 	protected void registerStatesAndModels()
 	{
 		// Crops
-		makeCrop((CropBlock)BlockInit.GOLDEN_POTATOES.get(), "golden_potatoes_stage", "golden_potatoes_stage");
-		makeCrop((CropBlock)BlockInit.GOLDEN_WHEAT.get(), "golden_wheat_stage", "golden_wheat_stage");
-		makeCrop((CropBlock)BlockInit.GOLDEN_BEETROOTS.get(), "golden_beetroots_stage", "golden_beetroots_stage");
-		makeCrop((CropBlock)BlockInit.GOLDEN_CARROTS.get(), "golden_carrots_stage", "golden_carrots_stage");
+		makeCrop((GoldenPotatoBlock)BlockInit.GOLDEN_POTATOES.get(), "golden_potatoes_stage", "golden_potatoes_stage");
+		makeCrop((GoldenWheatBlock)BlockInit.GOLDEN_WHEAT.get(), "golden_wheat_stage", "golden_wheat_stage");
+		makeCrop((GoldenBeetrootBlock)BlockInit.GOLDEN_BEETROOTS.get(), "golden_beetroots_stage", "golden_beetroots_stage");
+		makeCrop((GoldenCarrotBlock)BlockInit.GOLDEN_CARROTS.get(), "golden_carrots_stage", "golden_carrots_stage");
 		
 		// Bushes
 		makeBush((SweetBerryBushBlock)BlockInit.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
@@ -62,6 +66,9 @@ public class ModBlockStateProvider extends BlockStateProvider
 		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), flowerPotCross(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()).getPath()));
 		
 		// Wood stuff
+        simpleBlock(BlockInit.GOLDEN_LEAVES.get());
+        simpleBlock(BlockInit.GOLDEN_PLANKS.get());
+		
 		ResourceLocation planksRL = blockTexture(BlockInit.GOLDEN_PLANKS.get());
 		
         logBlock((RotatedPillarBlock)BlockInit.GOLDEN_LOG.get());
@@ -77,6 +84,9 @@ public class ModBlockStateProvider extends BlockStateProvider
         stairsBlock((StairBlock)BlockInit.GOLDEN_STAIRS.get(), planksRL);
         trapdoorBlock((TrapDoorBlock)BlockInit.GOLDEN_TRAPDOOR.get(), blockTexture(BlockInit.GOLDEN_TRAPDOOR.get()), true);
         
+        models().getBuilder("block/golden_button_inventory").parent(models().getExistingFile(mcLoc("block/button_inventory"))).texture("texture", planksRL);
+        models().getBuilder("block/golden_fence_inventory").parent(models().getExistingFile(mcLoc("block/fence_inventory"))).texture("texture", planksRL);
+        
         ResourceLocation doorBottomRL = modLoc("block/golden_door_bottom");
         ResourceLocation doorTopRL = modLoc("block/golden_door_top");
         createDoorModel("golden_door", "_bottom_left", doorBottomRL, doorTopRL);
@@ -87,9 +97,6 @@ public class ModBlockStateProvider extends BlockStateProvider
         createDoorModel("golden_door", "_top_left_open", doorBottomRL, doorTopRL);
         createDoorModel("golden_door", "_top_right", doorBottomRL, doorTopRL);
         createDoorModel("golden_door", "_top_right_open", doorBottomRL, doorTopRL);
-        
-        simpleBlock(BlockInit.GOLDEN_LEAVES.get());
-        simpleBlock(BlockInit.GOLDEN_PLANKS.get());
         
         ResourceLocation craftingTableRL = modLoc("block/golden_crafting_table");
         simpleBlock(BlockInit.GOLDEN_CRAFTING_TABLE.get(), models().cube("golden_crafting_table", planksRL,
@@ -165,7 +172,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().getBuilder(modelName + state.getValue(StemBlock.AGE))
-        		.parent(models().getExistingFile(mcLoc("block/stem_growth" + state.getValue(StemBlock.AGE)))).texture("stem", textureName));
+        		.parent(models().getExistingFile(mcLoc("block/stem_growth" + state.getValue(StemBlock.AGE)))).texture("stem", "block/" + textureName));
 
         return models;
     }

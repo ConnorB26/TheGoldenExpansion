@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldenexpansion:block/golden_slab"
+    },
+    "type=double": {
+      "model": "goldenexpansion:block/golden_planks"
+    },
+    "type=top": {
+      "model": "goldenexpansion:block/golden_slab_top"
+    }
+  }
+}

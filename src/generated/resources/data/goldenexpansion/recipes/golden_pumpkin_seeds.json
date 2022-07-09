@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "goldenexpansion:golden_pumpkin"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "goldenexpansion:golden_pumpkin_seeds"
+  }
+}

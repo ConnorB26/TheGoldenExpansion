@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "goldenexpansion:block/golden_planks",
+    "side": "goldenexpansion:block/golden_planks",
+    "top": "goldenexpansion:block/golden_planks"
+  }
+}

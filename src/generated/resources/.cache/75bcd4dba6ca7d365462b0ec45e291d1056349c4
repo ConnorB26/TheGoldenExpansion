@@ -1,0 +1,18 @@
+// 1.19	2022-07-09T11:49:32.4070824	Tags for minecraft:block
+23e455cac85a4f31891d40191f255ba3d71f38f3 data/goldenexpansion/tags/blocks/golden_logs.json
+c7185af78735e5a3dd300ad287d47c2bc216c65f data/minecraft/tags/blocks/crops.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/fence_gates.json
+4d931adc04d9516eede1e19037653120fe86e289 data/minecraft/tags/blocks/flower_pots.json
+f2e7a65dce6043f529ce6b73e5456ee4f7009d95 data/minecraft/tags/blocks/leaves.json
+497b41fc2641e13c75d2e7735bc1cf9803e34e46 data/minecraft/tags/blocks/logs_that_burn.json
+c868b7a30b423ab5eab606dc58a1b33263a6e31f data/minecraft/tags/blocks/mineable/axe.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/planks.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/saplings.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/signs.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_buttons.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_doors.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_fences.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_pressure_plates.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_slabs.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_stairs.json
+433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/blocks/wooden_trapdoors.json

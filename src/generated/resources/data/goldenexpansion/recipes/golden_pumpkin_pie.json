@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "goldenexpansion:golden_pumpkin"
+    }
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_pumpkin_pie"
+  }
+}
