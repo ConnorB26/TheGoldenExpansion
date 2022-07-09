@@ -26,6 +26,7 @@ public class ModLootTableProvider extends BaseLootTableProvider
 		dropSelf(BlockInit.GOLDEN_WOOD.get());
 		dropSelf(BlockInit.STRIPPED_GOLDEN_LOG.get());
 		dropSelf(BlockInit.STRIPPED_GOLDEN_WOOD.get());
+		dropSelf(BlockInit.GOLDEN_PLANKS.get());
 		dropSelf(BlockInit.GOLDEN_STAIRS.get());
 		dropSelf(BlockInit.GOLDEN_SLAB.get());
 		dropSelf(BlockInit.GOLDEN_FENCE.get());
