@@ -27,7 +27,6 @@ import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -55,15 +54,16 @@ public class ModBlockStateProvider extends BlockStateProvider
 		// Stems
 		makeStem((StemBlock)BlockInit.GOLDEN_MELON_STEM.get(), "golden_melon_stem_stage", "golden_melon_stem");
 		makeStem((StemBlock)BlockInit.GOLDEN_PUMPKIN_STEM.get(), "golden_pumpkin_stem_stage", "golden_melon_stem");
-		horizontalBlock(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get(), models().getBuilder("attached_golden_melon_stem").parent(models().getExistingFile(mcLoc("block/stem_fruit")))
-				.texture("stem", modLoc("block/golden_melon_stem")).texture("upperstem", modLoc("block/attached_golden_melon_stem")), 270);
+		horizontalBlock(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get(), models().withExistingParent(getBlockPath(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get()), "block/stem_fruit")
+			.texture("stem", modLoc("block/golden_melon_stem")).texture("upperstem", modLoc("block/attached_golden_melon_stem")), 270);
 		horizontalBlock(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get(), models().getExistingFile(modLoc("block/attached_golden_melon_stem")));
-		simpleBlock(BlockInit.GOLDEN_MELON.get(), models().cubeColumn("golden_melon", modLoc("block/golden_melon_side"), modLoc("block/golden_melon_top")));
-		simpleBlock(BlockInit.GOLDEN_PUMPKIN.get(), models().cubeColumn("golden_pumpkin", modLoc("block/golden_pumpkin_side"), modLoc("block/golden_pumpkin_top")));
+		simpleBlock(BlockInit.GOLDEN_MELON.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_MELON.get()), modLoc("block/golden_melon_side"), modLoc("block/golden_melon_top")));
+		simpleBlock(BlockInit.GOLDEN_PUMPKIN.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_PUMPKIN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_pumpkin_top")));
 		
 		// Other
-		simpleBlock(BlockInit.GOLDEN_SAPLING.get(), models().cross(getBlockPath(BlockInit.GOLDEN_SAPLING.get()).getPath(), blockTexture(BlockInit.GOLDEN_SAPLING.get())));
-		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), flowerPotCross(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()).getPath()));
+		simpleBlock(BlockInit.GOLDEN_SAPLING.get(), models().cross(getBlockPath(BlockInit.GOLDEN_SAPLING.get()), blockTexture(BlockInit.GOLDEN_SAPLING.get())));
+		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), models().withExistingParent(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()), "block/flower_pot_cross")
+				.texture("plant", "block/" + getBlockPath(BlockInit.GOLDEN_SAPLING.get())));
 		
 		// Wood stuff
         simpleBlock(BlockInit.GOLDEN_LEAVES.get());
@@ -110,9 +110,9 @@ public class ModBlockStateProvider extends BlockStateProvider
         return new ResourceLocation(rl.getNamespace(), rl.getPath() + suffix);
     }
 	
-	private ResourceLocation getBlockPath(Block b)
+	private String getBlockPath(Block b)
 	{
-		return ForgeRegistries.BLOCKS.getKey(b);
+		return ForgeRegistries.BLOCKS.getKey(b).getPath();
 	}
 	
 	// Create door model from scratch since Forge one doesn't work
@@ -120,11 +120,6 @@ public class ModBlockStateProvider extends BlockStateProvider
 	{
 		models().getBuilder(originalName + suffix).parent(models().getExistingFile(mcLoc("block/door" + suffix))).texture("bottom", bottomTexture).texture("top", topTexture);
 	}
-	
-	public ModelFile flowerPotCross(String name)
-	{
-        return models().withExistingParent(name, "flower_pot_cross");
-    }
 
 	// Crop helper functions
     public void makeCrop(CropBlock block, String modelName, String textureName)

@@ -1,4 +1,4 @@
-// 1.19	2022-07-09T11:49:32.4150445	LootTables
+// 1.19	2022-07-09T12:40:11.0967238	LootTables
 d442a9fc58859c8e8a6afdfa0ff5768d495bba58 data/goldenexpansion/loot_tables/blocks/golden_button.json
 72adf43f1ef5a7a05cabbb6f1644a69ad7072b98 data/goldenexpansion/loot_tables/blocks/golden_crafting_table.json
 6a2f4c0482f8182bfd106a423022aad492970174 data/goldenexpansion/loot_tables/blocks/golden_door.json
@@ -6,6 +6,7 @@ d442a9fc58859c8e8a6afdfa0ff5768d495bba58 data/goldenexpansion/loot_tables/blocks
 6aede53d3be1a13688e4b76e1368fd326aa52d9a data/goldenexpansion/loot_tables/blocks/golden_fence_gate.json
 25cd4dd029f186d2fcc8d5e0109adbbdb865be62 data/goldenexpansion/loot_tables/blocks/golden_log.json
 c6352099e371d0f27ec060cccd6e3ff516d42c6c data/goldenexpansion/loot_tables/blocks/golden_melon.json
+348be425f67efc14e6d0ccc494a1fcb3d9b7356c data/goldenexpansion/loot_tables/blocks/golden_planks.json
 981eecdb1b20cfc5eacbd82eca40e6bc92b9e5b1 data/goldenexpansion/loot_tables/blocks/golden_pressure_plate.json
 1fc854905ff6dd188b5e37f3b6a17fdc73b718f1 data/goldenexpansion/loot_tables/blocks/golden_pumpkin.json
 1748f7daa9c8a7f80eda08bf024aefc3d37bbc5e data/goldenexpansion/loot_tables/blocks/golden_sapling.json

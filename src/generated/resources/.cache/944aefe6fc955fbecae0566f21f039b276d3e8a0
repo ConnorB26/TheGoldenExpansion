@@ -1,4 +1,4 @@
-// 1.19	2022-07-09T11:49:32.4030836	Item Models: goldenexpansion
+// 1.19	2022-07-09T13:17:12.5655373	Item Models: goldenexpansion
 08246cf79e1222128ab232fee60194d79207cfd2 assets/goldenexpansion/models/item/blueberries.json
 6e76ea6bf0ca572fa40c1cbeb54c647cec81a67c assets/goldenexpansion/models/item/flint_and_gold.json
 9d5927b435d72747476e9a1cda60f27c1decfaa8 assets/goldenexpansion/models/item/golden_baked_potato.json
@@ -8,6 +8,7 @@ a03c9e6aca622822346be5d167f70fa5e92dc677 assets/goldenexpansion/models/item/gold
 82617a8093c797b5d107364bb150cd80b1392454 assets/goldenexpansion/models/item/golden_blueberries.json
 8d99204edaa3f58a4dfcbf1deba09df01dc11b0b assets/goldenexpansion/models/item/golden_bread.json
 0045549c0ff37ac1028ba80f94c275378f826d33 assets/goldenexpansion/models/item/golden_button.json
+e430427faa9c4d735e408fa68833f5345a82dd39 assets/goldenexpansion/models/item/golden_crafting_table.json
 777f34776f2bf5d0e7c69f4a8b8f18575786880c assets/goldenexpansion/models/item/golden_door.json
 4873efee873e2751210e5494bafa6981223fce57 assets/goldenexpansion/models/item/golden_fence.json
 6ba06e9aa03740708dbe95c6ef3f050d4f0e915d assets/goldenexpansion/models/item/golden_fence_gate.json
@@ -21,7 +22,7 @@ a883ee34c41bb62dccefa56ea18325e3f5128a2e assets/goldenexpansion/models/item/gold
 f9d58da509e5ab088854307cd2a32d074e253a0e assets/goldenexpansion/models/item/golden_pumpkin.json
 cbb87842d6888ca05a352e4dd5d027628ba0ddb5 assets/goldenexpansion/models/item/golden_pumpkin_pie.json
 946ee01ce13c5706bc5696084cebda588fb82422 assets/goldenexpansion/models/item/golden_pumpkin_seeds.json
-3e37e6fddd081c7e0b5b0118a17c82d2e1adf1ef assets/goldenexpansion/models/item/golden_sapling.json
+9ab7c92c2b89857d165fa7280ee4a92965ae231c assets/goldenexpansion/models/item/golden_sapling.json
 8de1f2451ace7a7fcc926449895510be8c273ef7 assets/goldenexpansion/models/item/golden_sign.json
 9120728ad94746ace2c230787d85263ca274527f assets/goldenexpansion/models/item/golden_slab.json
 39442110aa160f67a7434215b7db99dc726da840 assets/goldenexpansion/models/item/golden_stairs.json
