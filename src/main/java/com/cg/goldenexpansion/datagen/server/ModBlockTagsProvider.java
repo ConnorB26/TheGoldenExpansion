@@ -42,6 +42,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider
 		tag(BlockTags.CROPS).add(BlockInit.GOLDEN_MELON_STEM.get());
 		tag(BlockTags.CROPS).add(BlockInit.GOLDEN_PUMPKIN_STEM.get());
 		
+		// Golden logs
+		tag(TagInit.Blocks.GOLDEN_LOGS).add(BlockInit.GOLDEN_LOG.get());
+		tag(TagInit.Blocks.GOLDEN_LOGS).add(BlockInit.GOLDEN_WOOD.get());
+		tag(TagInit.Blocks.GOLDEN_LOGS).add(BlockInit.STRIPPED_GOLDEN_LOG.get());
+		tag(TagInit.Blocks.GOLDEN_LOGS).add(BlockInit.STRIPPED_GOLDEN_WOOD.get());
+		
 		// Mineable
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_MELON.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_PUMPKIN.get());

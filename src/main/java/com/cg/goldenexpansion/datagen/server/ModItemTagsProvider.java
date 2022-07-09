@@ -33,5 +33,11 @@ public class ModItemTagsProvider extends ItemTagsProvider
 		tag(ItemTags.WOODEN_STAIRS).add(BlockInit.GOLDEN_PLANKS.get().asItem());
 		tag(ItemTags.WOODEN_TRAPDOORS).add(BlockInit.GOLDEN_PLANKS.get().asItem());
 		tag(ItemTags.LEAVES).add(BlockInit.GOLDEN_LEAVES.get().asItem());
+		
+		// Golden log tag
+		tag(TagInit.Items.GOLDEN_LOGS).add(BlockInit.GOLDEN_LOG.get().asItem());
+		tag(TagInit.Items.GOLDEN_LOGS).add(BlockInit.GOLDEN_WOOD.get().asItem());
+		tag(TagInit.Items.GOLDEN_LOGS).add(BlockInit.STRIPPED_GOLDEN_LOG.get().asItem());
+		tag(TagInit.Items.GOLDEN_LOGS).add(BlockInit.STRIPPED_GOLDEN_WOOD.get().asItem());
 	}
 }
