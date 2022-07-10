@@ -1,5 +1,6 @@
 package com.cg.goldenexpansion;
 
+import com.cg.goldenexpansion.init.BlockEntitiesInit;
 import com.cg.goldenexpansion.init.BlockInit;
 import com.cg.goldenexpansion.init.ItemInit;
 
@@ -35,6 +36,7 @@ public class GoldenExpansion
 		ItemInit.ITEMS.register(modEventBus);
 		ItemInit.VANILLA_ITEMS.register(modEventBus);
 		BlockInit.BLOCKS.register(modEventBus);
+		BlockEntitiesInit.BLOCK_ENTITIES.register(modEventBus);
 		
 		MinecraftForge.EVENT_BUS.register(this);
 	}

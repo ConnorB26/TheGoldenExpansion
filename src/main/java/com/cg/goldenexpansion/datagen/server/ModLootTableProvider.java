@@ -32,7 +32,7 @@ public class ModLootTableProvider extends BaseLootTableProvider
 		dropSelf(BlockInit.GOLDEN_FENCE.get());
 		dropSelf(BlockInit.GOLDEN_FENCE_GATE.get());
 		dropSelf(BlockInit.GOLDEN_SIGN.get());
-		//dropSelf(BlockInit.GOLDEN_WALL_SIGN.get());
+		dropSelf(BlockInit.GOLDEN_WALL_SIGN.get());
 		dropSelf(BlockInit.GOLDEN_DOOR.get());
 		dropSelf(BlockInit.GOLDEN_TRAPDOOR.get());
 		dropSelf(BlockInit.GOLDEN_PRESSURE_PLATE.get());

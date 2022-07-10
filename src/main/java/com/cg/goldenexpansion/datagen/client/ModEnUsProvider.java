@@ -69,7 +69,6 @@ public class ModEnUsProvider extends LanguageProvider
 		add(BlockInit.GOLDEN_PRESSURE_PLATE.get(), "Golden Pressure Plate");
 		add(BlockInit.GOLDEN_BUTTON.get(), "Golden Button");
 		add(BlockInit.GOLDEN_SIGN.get(), "Golden Sign");
-		add(BlockInit.GOLDEN_WALL_SIGN.get(), "Golden Wall Sign");
 		add(BlockInit.GOLDEN_CRAFTING_TABLE.get(), "Golden Crafting Table");
 	}
 }

@@ -10,6 +10,9 @@ import com.cg.goldenexpansion.block.crops.GoldenBeetrootBlock;
 import com.cg.goldenexpansion.block.crops.GoldenCarrotBlock;
 import com.cg.goldenexpansion.block.crops.GoldenPotatoBlock;
 import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
+import com.cg.goldenexpansion.block.entity.ModStandingSignBlock;
+import com.cg.goldenexpansion.block.entity.ModWallSignBlock;
+import com.cg.goldenexpansion.block.entity.ModWoodTypes;
 import com.google.common.base.Function;
 import com.google.common.base.Supplier;
 
@@ -30,15 +33,12 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.block.StemGrownBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
-import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -92,9 +92,8 @@ public class BlockInit
 	public static final RegistryObject<Block> GOLDEN_BUTTON = register("golden_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_CRAFTING_TABLE = register("golden_crafting_table", () -> new CraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)), goldenBlockItem());
 	
-	// still need to redo sign block entity stuff
-	public static final RegistryObject<Block> GOLDEN_SIGN = register("golden_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), WoodType.OAK), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_WALL_SIGN = registerBlock("golden_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), WoodType.OAK));
+	public static final RegistryObject<Block> GOLDEN_SIGN = registerBlock("golden_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.GOLDEN));
+	public static final RegistryObject<Block> GOLDEN_WALL_SIGN = registerBlock("golden_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GOLDEN));
 	
 	// Helper functions
 	private static <T extends Block> Function<RegistryObject<T>, Supplier<? extends Item>> goldenBlockItem()

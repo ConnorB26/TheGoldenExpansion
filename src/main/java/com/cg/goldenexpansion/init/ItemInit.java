@@ -7,6 +7,7 @@ import com.google.common.base.Supplier;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +24,7 @@ public class ItemInit
 	public static final RegistryObject<Item> FLINT_AND_GOLD = register("flint_and_gold", () -> new FlintAndGold(goldenTab().stacksTo(1).defaultDurability(10)));
 	public static final RegistryObject<Item> GOLDEN_WHEAT = register("golden_wheat", () -> new Item(goldenTab()));
 	public static final RegistryObject<Item> GOLDEN_STICK = register("golden_stick", () -> new Item(goldenTab()));
+	public static final RegistryObject<Item> GOLDEN_SIGN = register("golden_sign", () -> new SignItem(goldenTab().stacksTo(16), BlockInit.GOLDEN_SIGN.get(), BlockInit.GOLDEN_WALL_SIGN.get()));
 	
 	// Non plantable foods
 	public static final RegistryObject<Item> GOLDEN_BREAD = register("golden_bread", () -> new Item(goldenFood(Items.BREAD)));
