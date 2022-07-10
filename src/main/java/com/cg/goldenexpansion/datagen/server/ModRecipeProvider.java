@@ -125,12 +125,12 @@ public class ModRecipeProvider extends RecipeProvider
 		// Golden upgrades (too OP to craft - found only?)
 		goldUpgrade(Items.BEETROOT_SEEDS, ItemInit.GOLDEN_BEETROOT_SEEDS.get(), consumer);
 		goldUpgrade(Items.WHEAT_SEEDS, ItemInit.GOLDEN_WHEAT_SEEDS.get(), consumer);
-		goldUpgrade(Items.CARROT, ItemInit.GOLDEN_CARROT.get(), consumer); // have to save to original mc location
 		goldUpgrade(Items.POTATO, ItemInit.GOLDEN_POTATO.get(), consumer);
 		goldUpgrade(Items.SWEET_BERRIES, ItemInit.GOLDEN_SWEET_BERRIES.get(), consumer);
 		goldUpgrade(ItemInit.BLUEBERRIES.get(), ItemInit.GOLDEN_BLUEBERRIES.get(), consumer);
 		goldUpgrade(Items.MELON_SEEDS, ItemInit.GOLDEN_MELON_SEEDS.get(), consumer);
 		goldUpgrade(Items.PUMPKIN_SEEDS, ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), consumer);
+		goldUpgrade(Items.CARROT, ItemInit.GOLDEN_CARROT.get(), consumer); // have to save to original mc location?
 		
 		// Shapeless Recipes
 		ShapelessRecipeBuilder.shapeless(planks, 4)

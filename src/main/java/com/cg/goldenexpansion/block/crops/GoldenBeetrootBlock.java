@@ -3,17 +3,14 @@ package com.cg.goldenexpansion.block.crops;
 import com.cg.goldenexpansion.init.ItemInit;
 
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.BeetrootBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class GoldenBeetrootBlock extends CropBlock
+public class GoldenBeetrootBlock extends BeetrootBlock
 {	
-	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
-	
 	public GoldenBeetrootBlock(Properties properties)
 	{
 		super(properties);
@@ -23,12 +20,6 @@ public class GoldenBeetrootBlock extends CropBlock
 	protected ItemLike getBaseSeedId()
 	{
 		return ItemInit.GOLDEN_BEETROOT_SEEDS.get();
-    }
-	
-	@Override
-	public int getMaxAge()
-	{
-		return 3;
     }
 	
 	@Override

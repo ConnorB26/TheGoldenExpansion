@@ -7,13 +7,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class GoldenWheatBlock extends CropBlock
 {	
-	public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
-	
 	public GoldenWheatBlock(Properties properties)
 	{
 		super(properties);
@@ -23,12 +20,6 @@ public class GoldenWheatBlock extends CropBlock
 	protected ItemLike getBaseSeedId()
 	{
 		return ItemInit.GOLDEN_WHEAT_SEEDS.get();
-    }
-	
-	@Override
-	public int getMaxAge()
-	{
-		return 7;
     }
 	
 	@Override

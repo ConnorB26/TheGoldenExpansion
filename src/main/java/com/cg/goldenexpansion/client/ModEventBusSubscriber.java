@@ -35,5 +35,6 @@ public class ModEventBusSubscriber
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_PUMPKIN_STEM.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_SAPLING.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_GOLDEN_SAPLING.get(), RenderType.cutout());
     }
 }

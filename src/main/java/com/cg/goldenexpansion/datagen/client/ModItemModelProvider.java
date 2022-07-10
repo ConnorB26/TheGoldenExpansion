@@ -57,7 +57,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 		oneLayerItem(BlockInit.GOLDEN_SIGN.get().asItem());
 		oneLayerItem(BlockInit.GOLDEN_DOOR.get().asItem());
-		getBuilder(itemRL(BlockInit.GOLDEN_SAPLING.get().asItem()).getPath()).parent(getExistingFile(mcLoc("item/generated"))).texture("layer0", modLoc("block/golden_sapling"));
+		oneLayerItem(BlockInit.GOLDEN_SAPLING.get().asItem());
 		
 		simpleBlockItem(BlockInit.GOLDEN_TRAPDOOR.get().asItem(), "_bottom");
 		simpleBlockItem(BlockInit.GOLDEN_BUTTON.get().asItem(), "_inventory");

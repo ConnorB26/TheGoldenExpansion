@@ -82,8 +82,7 @@ public class BlockInit
 	public static final RegistryObject<Block> STRIPPED_GOLDEN_LOG = register("stripped_golden_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), goldenBlockItem());
 	public static final RegistryObject<Block> STRIPPED_GOLDEN_WOOD = register("stripped_golden_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_PLANKS = register("golden_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), goldenBlockItem());
-	@SuppressWarnings("deprecation")
-	public static final RegistryObject<Block> GOLDEN_STAIRS = register("golden_stairs", () -> new StairBlock(GOLDEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_STAIRS = register("golden_stairs", () -> new StairBlock(() -> GOLDEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_SLAB = register("golden_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE = register("golden_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE_GATE = register("golden_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), goldenBlockItem());

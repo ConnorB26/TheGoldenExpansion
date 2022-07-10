@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -41,10 +42,12 @@ public class ModBlockStateProvider extends BlockStateProvider
 	protected void registerStatesAndModels()
 	{
 		// Crops
-		makeCrop((GoldenPotatoBlock)BlockInit.GOLDEN_POTATOES.get(), "golden_potatoes_stage", "golden_potatoes_stage");
-		makeCrop((GoldenWheatBlock)BlockInit.GOLDEN_WHEAT.get(), "golden_wheat_stage", "golden_wheat_stage");
-		makeCrop((GoldenBeetrootBlock)BlockInit.GOLDEN_BEETROOTS.get(), "golden_beetroots_stage", "golden_beetroots_stage");
-		makeCrop((GoldenCarrotBlock)BlockInit.GOLDEN_CARROTS.get(), "golden_carrots_stage", "golden_carrots_stage");
+		int[] threeStagePlant = new int[]{0, 0, 1, 1, 2, 2, 2, 3};
+		int[] sevenStagePlant = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
+		makeCrop((GoldenPotatoBlock)BlockInit.GOLDEN_POTATOES.get(), "golden_potatoes_stage", "golden_potatoes_stage", threeStagePlant);
+		makeCrop((GoldenCarrotBlock)BlockInit.GOLDEN_CARROTS.get(), "golden_carrots_stage", "golden_carrots_stage", threeStagePlant);
+		makeCrop((GoldenWheatBlock)BlockInit.GOLDEN_WHEAT.get(), "golden_wheat_stage", "golden_wheat_stage", sevenStagePlant);
+		makeCrop((GoldenBeetrootBlock)BlockInit.GOLDEN_BEETROOTS.get(), "golden_beetroots_stage", "golden_beetroots_stage", sevenStagePlant);
 		
 		// Bushes
 		makeBush((SweetBerryBushBlock)BlockInit.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
@@ -55,22 +58,21 @@ public class ModBlockStateProvider extends BlockStateProvider
 		makeStem((StemBlock)BlockInit.GOLDEN_MELON_STEM.get(), "golden_melon_stem_stage", "golden_melon_stem");
 		makeStem((StemBlock)BlockInit.GOLDEN_PUMPKIN_STEM.get(), "golden_pumpkin_stem_stage", "golden_melon_stem");
 		horizontalBlock(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get(), models().withExistingParent(getBlockPath(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get()), "block/stem_fruit")
-			.texture("stem", modLoc("block/golden_melon_stem")).texture("upperstem", modLoc("block/attached_golden_melon_stem")), 270);
+				.texture("stem", modLoc("block/golden_melon_stem")).texture("upperstem", modLoc("block/attached_golden_melon_stem")), 270);
 		horizontalBlock(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get(), models().getExistingFile(modLoc("block/attached_golden_melon_stem")));
 		simpleBlock(BlockInit.GOLDEN_MELON.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_MELON.get()), modLoc("block/golden_melon_side"), modLoc("block/golden_melon_top")));
 		simpleBlock(BlockInit.GOLDEN_PUMPKIN.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_PUMPKIN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_pumpkin_top")));
 		
 		// Other
 		simpleBlock(BlockInit.GOLDEN_SAPLING.get(), models().cross(getBlockPath(BlockInit.GOLDEN_SAPLING.get()), blockTexture(BlockInit.GOLDEN_SAPLING.get())));
-		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), models().withExistingParent(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()), "block/flower_pot_cross")
-				.texture("plant", "block/" + getBlockPath(BlockInit.GOLDEN_SAPLING.get())));
+		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), models().withExistingParent(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()), "flower_pot_cross")
+				.texture("plant", modLoc("block/golden_sapling")));
 		
 		// Wood stuff
         simpleBlock(BlockInit.GOLDEN_LEAVES.get());
         simpleBlock(BlockInit.GOLDEN_PLANKS.get());
 		
 		ResourceLocation planksRL = blockTexture(BlockInit.GOLDEN_PLANKS.get());
-		
         logBlock((RotatedPillarBlock)BlockInit.GOLDEN_LOG.get());
         axisBlock((RotatedPillarBlock)BlockInit.GOLDEN_WOOD.get(), blockTexture(BlockInit.GOLDEN_LOG.get()), blockTexture(BlockInit.GOLDEN_LOG.get()));
         axisBlock((RotatedPillarBlock)BlockInit.STRIPPED_GOLDEN_LOG.get(), modLoc("block/stripped_golden_log"), modLoc("block/stripped_golden_log_top"));
@@ -83,20 +85,10 @@ public class ModBlockStateProvider extends BlockStateProvider
         slabBlock((SlabBlock)BlockInit.GOLDEN_SLAB.get(), planksRL, planksRL);
         stairsBlock((StairBlock)BlockInit.GOLDEN_STAIRS.get(), planksRL);
         trapdoorBlock((TrapDoorBlock)BlockInit.GOLDEN_TRAPDOOR.get(), blockTexture(BlockInit.GOLDEN_TRAPDOOR.get()), true);
+        doorBlock((DoorBlock)BlockInit.GOLDEN_DOOR.get(), modLoc("block/golden_door_bottom"), modLoc("block/golden_door_top"));
         
         models().getBuilder("block/golden_button_inventory").parent(models().getExistingFile(mcLoc("block/button_inventory"))).texture("texture", planksRL);
         models().getBuilder("block/golden_fence_inventory").parent(models().getExistingFile(mcLoc("block/fence_inventory"))).texture("texture", planksRL);
-        
-        ResourceLocation doorBottomRL = modLoc("block/golden_door_bottom");
-        ResourceLocation doorTopRL = modLoc("block/golden_door_top");
-        createDoorModel("golden_door", "_bottom_left", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_bottom_left_open", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_bottom_right", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_bottom_right_open", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_top_left", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_top_left_open", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_top_right", doorBottomRL, doorTopRL);
-        createDoorModel("golden_door", "_top_right_open", doorBottomRL, doorTopRL);
         
         ResourceLocation craftingTableRL = modLoc("block/golden_crafting_table");
         simpleBlock(BlockInit.GOLDEN_CRAFTING_TABLE.get(), models().cube("golden_crafting_table", planksRL,
@@ -114,26 +106,20 @@ public class ModBlockStateProvider extends BlockStateProvider
 	{
 		return ForgeRegistries.BLOCKS.getKey(b).getPath();
 	}
-	
-	// Create door model from scratch since Forge one doesn't work
-	private void createDoorModel(String originalName, String suffix, ResourceLocation bottomTexture, ResourceLocation topTexture)
-	{
-		models().getBuilder(originalName + suffix).parent(models().getExistingFile(mcLoc("block/door" + suffix))).texture("bottom", bottomTexture).texture("top", topTexture);
-	}
 
 	// Crop helper functions
-    public void makeCrop(CropBlock block, String modelName, String textureName)
+	public void makeCrop(CropBlock block, String modelName, String textureName, int[] stages)
     {
-        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName, stages);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName)
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName, int[] stages)
     {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(block.getAgeProperty()),
-                new ResourceLocation(GoldenExpansion.MOD_ID, "block/" + textureName + state.getValue(block.getAgeProperty()))));
+        models[0] = new ConfiguredModel(models().crop(modelName + stages[state.getValue(block.getAgeProperty())],
+                new ResourceLocation(GoldenExpansion.MOD_ID, "block/" + textureName + stages[state.getValue(block.getAgeProperty())])));
 
         return models;
     }
