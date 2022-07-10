@@ -13,6 +13,7 @@ import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
 import com.cg.goldenexpansion.block.entity.ModStandingSignBlock;
 import com.cg.goldenexpansion.block.entity.ModWallSignBlock;
 import com.cg.goldenexpansion.block.entity.ModWoodTypes;
+import com.cg.goldenexpansion.world.feature.tree.GoldenTreeGrower;
 import com.google.common.base.Function;
 import com.google.common.base.Supplier;
 
@@ -37,7 +38,6 @@ import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.block.StemGrownBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
-import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -71,7 +71,7 @@ public class BlockInit
 	public static final RegistryObject<Block> ATTACHED_GOLDEN_PUMPKIN_STEM = registerBlock("attached_golden_pumpkin_stem", () -> new AttachedStemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
 			() -> ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.ATTACHED_PUMPKIN_STEM)));
 	
-	public static final RegistryObject<Block> GOLDEN_SAPLING = register("golden_sapling", () -> new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_SAPLING = register("golden_sapling", () -> new SaplingBlock(new GoldenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), goldenBlockItem());
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Block> POTTED_GOLDEN_SAPLING = registerBlock("potted_golden_sapling", () -> new FlowerPotBlock(GOLDEN_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
 	
