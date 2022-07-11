@@ -37,7 +37,7 @@ public class FlintAndGold extends FlintAndSteelItem
                     }
                 }
             }
-        } 
+        }
 		
 		return super.useOn(context);
     }

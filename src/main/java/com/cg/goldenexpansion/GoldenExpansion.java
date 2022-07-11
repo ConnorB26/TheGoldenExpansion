@@ -5,6 +5,7 @@ import com.cg.goldenexpansion.init.BlockInit;
 import com.cg.goldenexpansion.init.ItemInit;
 import com.cg.goldenexpansion.init.POIsInit;
 import com.cg.goldenexpansion.init.ParticlesInit;
+import com.cg.goldenexpansion.util.StrippingMap;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -14,6 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(GoldenExpansion.MOD_ID)
@@ -42,6 +44,13 @@ public class GoldenExpansion
 		POIsInit.POI.register(modEventBus);
 		ParticlesInit.PARTICLE_TYPES.register(modEventBus);
 		
+		modEventBus.addListener(this::onLoadComplete);
+		
 		MinecraftForge.EVENT_BUS.register(this);
+	}
+	
+	public void onLoadComplete(final FMLLoadCompleteEvent event)
+	{
+		StrippingMap.registerStrippables();
 	}
 }
