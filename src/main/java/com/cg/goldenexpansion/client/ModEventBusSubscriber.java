@@ -4,6 +4,9 @@ import com.cg.goldenexpansion.GoldenExpansion;
 import com.cg.goldenexpansion.block.entity.ModWoodTypes;
 import com.cg.goldenexpansion.init.BlockEntitiesInit;
 import com.cg.goldenexpansion.init.BlockInit;
+import com.cg.goldenexpansion.init.POIsInit;
+import com.cg.goldenexpansion.init.ParticlesInit;
+import com.cg.goldenexpansion.particle.GoldenPortalParticles;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -12,6 +15,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -26,6 +30,7 @@ public class ModEventBusSubscriber
 	{
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_DOOR.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_TRAPDOOR.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_PORTAL.get(), RenderType.translucent());
 		
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_LEAVES.get(), RenderType.cutoutMipped());
 		
@@ -53,6 +58,13 @@ public class ModEventBusSubscriber
 		event.enqueueWork(() ->
 		{
             Sheets.addWoodType(ModWoodTypes.GOLDEN);
+            POIsInit.registerPOIs();
         });
     }
+	
+	@SubscribeEvent
+	public static void registerParticleFactories(final RegisterParticleProvidersEvent event)
+	{
+		event.register(ParticlesInit.GOLDEN_PORTAL_PARTICLES.get(), GoldenPortalParticles.Provider::new);
+	}
 }

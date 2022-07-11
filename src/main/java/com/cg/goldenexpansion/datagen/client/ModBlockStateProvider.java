@@ -8,6 +8,7 @@ import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
 import com.cg.goldenexpansion.init.BlockInit;
 import com.google.common.base.Function;
 
+import net.minecraft.core.Direction.Axis;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -16,6 +17,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -63,11 +65,6 @@ public class ModBlockStateProvider extends BlockStateProvider
 		simpleBlock(BlockInit.GOLDEN_MELON.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_MELON.get()), modLoc("block/golden_melon_side"), modLoc("block/golden_melon_top")));
 		simpleBlock(BlockInit.GOLDEN_PUMPKIN.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_PUMPKIN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_pumpkin_top")));
 		
-		// Other
-		simpleBlock(BlockInit.GOLDEN_SAPLING.get(), models().cross(getBlockPath(BlockInit.GOLDEN_SAPLING.get()), blockTexture(BlockInit.GOLDEN_SAPLING.get())));
-		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), models().withExistingParent(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()), "flower_pot_cross")
-				.texture("plant", modLoc("block/golden_sapling")));
-		
 		// Wood stuff
         simpleBlock(BlockInit.GOLDEN_LEAVES.get());
         simpleBlock(BlockInit.GOLDEN_PLANKS.get());
@@ -94,6 +91,17 @@ public class ModBlockStateProvider extends BlockStateProvider
         simpleBlock(BlockInit.GOLDEN_CRAFTING_TABLE.get(), models().cube("golden_crafting_table", planksRL,
         		extend(craftingTableRL, "_top"), extend(craftingTableRL, "_front"), extend(craftingTableRL, "_side"),
         		extend(craftingTableRL, "_side"), extend(craftingTableRL, "_top")).texture("particle", extend(craftingTableRL, "_front")));
+        
+        simpleBlock(BlockInit.GOLDEN_SAPLING.get(), models().cross(getBlockPath(BlockInit.GOLDEN_SAPLING.get()), blockTexture(BlockInit.GOLDEN_SAPLING.get())));
+		simpleBlock(BlockInit.POTTED_GOLDEN_SAPLING.get(), models().withExistingParent(getBlockPath(BlockInit.POTTED_GOLDEN_SAPLING.get()), "flower_pot_cross")
+				.texture("plant", modLoc("block/golden_sapling")));
+		
+		// Portal
+		getVariantBuilder(BlockInit.GOLDEN_PORTAL.get())
+		        .partialState().with(NetherPortalBlock.AXIS, Axis.Z)
+		            .modelForState().modelFile(models().getExistingFile(modLoc("block/golden_portal_ew"))).addModel()
+		        .partialState().with(NetherPortalBlock.AXIS, Axis.X)
+		            .modelForState().modelFile(models().getExistingFile(modLoc("block/golden_portal_ns"))).addModel();
 	}
 	
 	// Helper functions

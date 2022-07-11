@@ -1,14 +1,14 @@
-// 1.19	2022-07-09T11:49:32.4120535	Tags for minecraft:item
+// 1.19	2022-07-10T17:58:45.6629697	Tags for minecraft:item
 23e455cac85a4f31891d40191f255ba3d71f38f3 data/goldenexpansion/tags/items/golden_logs.json
 f2e7a65dce6043f529ce6b73e5456ee4f7009d95 data/minecraft/tags/items/leaves.json
 497b41fc2641e13c75d2e7735bc1cf9803e34e46 data/minecraft/tags/items/logs_that_burn.json
 433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/planks.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/saplings.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/signs.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_buttons.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_doors.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_fences.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_pressure_plates.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_slabs.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_stairs.json
-433842110756fb1678405b62f009a1aee85b072d data/minecraft/tags/items/wooden_trapdoors.json
+d7fd5c1ff898c5cb5bd662120051fff68bcec0d6 data/minecraft/tags/items/saplings.json
+afa6d492f358308673c73d7ed943992b75332c29 data/minecraft/tags/items/signs.json
+741983f7da7ee022f548e7332af4bb4b532df05b data/minecraft/tags/items/wooden_buttons.json
+8e5c6d4bdab4c6166a0276533209e5f36ad80c22 data/minecraft/tags/items/wooden_doors.json
+4c73fb6c23eb7fe89a53a2f851ad464b87c3ffb3 data/minecraft/tags/items/wooden_fences.json
+15ff1e4a03d15085b56d29a3b6e6ba38eb128af8 data/minecraft/tags/items/wooden_pressure_plates.json
+4a88c6ad3e7f54c08b12bdee15c3b80b1889e84b data/minecraft/tags/items/wooden_slabs.json
+eaca684c5c05c453ce97b15c545fa97dcdf0c481 data/minecraft/tags/items/wooden_stairs.json
+b2406c52ec3ad2540969258abf38dd1a8b6100ff data/minecraft/tags/items/wooden_trapdoors.json

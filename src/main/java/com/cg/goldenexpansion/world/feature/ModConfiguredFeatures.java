@@ -20,6 +20,6 @@ public class ModConfiguredFeatures
                     BlockStateProvider.simple(BlockInit.GOLDEN_LOG.get()),
                     new StraightTrunkPlacer(4, 5, 3),
                     BlockStateProvider.simple(BlockInit.GOLDEN_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 4),
+                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
                     new TwoLayersFeatureSize(1, 0, 2)).build());
 }

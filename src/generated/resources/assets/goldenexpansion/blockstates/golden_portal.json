@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "goldenexpansion:block/golden_portal_ns"
+    },
+    "axis=z": {
+      "model": "goldenexpansion:block/golden_portal_ew"
+    }
+  }
+}

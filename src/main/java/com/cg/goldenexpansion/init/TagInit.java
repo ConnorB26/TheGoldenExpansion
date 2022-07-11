@@ -14,6 +14,7 @@ public final class TagInit
 	public static final class Blocks
 	{
 		public static final TagKey<Block> GOLDEN_LOGS = mod("golden_logs");
+		public static final TagKey<Block> GOLDEN_PORTAL_FRAME_BLOCKS = mod("golden_portal_frame_blocks");
 		
 		private static TagKey<Block> mod(String path)
 		{
