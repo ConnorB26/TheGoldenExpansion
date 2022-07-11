@@ -4,8 +4,7 @@ import com.cg.goldenexpansion.GoldenExpansion;
 import com.cg.goldenexpansion.block.GoldenMelon;
 import com.cg.goldenexpansion.block.GoldenPortalBlock;
 import com.cg.goldenexpansion.block.GoldenPumpkin;
-import com.cg.goldenexpansion.block.StrippableGoldenLog;
-import com.cg.goldenexpansion.block.StrippableGoldenWood;
+import com.cg.goldenexpansion.block.StrippableBlock;
 import com.cg.goldenexpansion.block.bushes.BlueberryBushBlock;
 import com.cg.goldenexpansion.block.bushes.GoldenBlueberryBushBlock;
 import com.cg.goldenexpansion.block.bushes.GoldenSweetBerryBushBlock;
@@ -75,12 +74,12 @@ public class BlockInit
 			() -> ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.ATTACHED_PUMPKIN_STEM)));
 	
 	public static final RegistryObject<Block> GOLDEN_SAPLING = register("golden_sapling", () -> new SaplingBlock(new GoldenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), goldenBlockItem());
-	public static final RegistryObject<Block> POTTED_GOLDEN_SAPLING = registerBlock("potted_golden_sapling", () -> new FlowerPotBlock(null, () -> GOLDEN_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+	public static final RegistryObject<Block> POTTED_GOLDEN_SAPLING = registerBlock("potted_golden_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> GOLDEN_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
 	
 	// Wood blocks
 	public static final RegistryObject<Block> GOLDEN_LEAVES = register("golden_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_LOG = register("golden_log", () -> new StrippableGoldenLog(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_WOOD = register("golden_wood", () -> new StrippableGoldenWood(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_LOG = register("golden_log", () -> new StrippableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_WOOD = register("golden_wood", () -> new StrippableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), goldenBlockItem());
 	public static final RegistryObject<Block> STRIPPED_GOLDEN_LOG = register("stripped_golden_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), goldenBlockItem());
 	public static final RegistryObject<Block> STRIPPED_GOLDEN_WOOD = register("stripped_golden_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_PLANKS = register("golden_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), goldenBlockItem());

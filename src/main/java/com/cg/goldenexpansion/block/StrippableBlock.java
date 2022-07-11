@@ -8,9 +8,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
 
-public class StrippableGoldenLog extends RotatedPillarBlock
+public class StrippableBlock extends RotatedPillarBlock
 {
-	public StrippableGoldenLog(Properties properties)
+	public StrippableBlock(Properties properties)
 	{
 		super(properties);
 	}
@@ -18,10 +18,16 @@ public class StrippableGoldenLog extends RotatedPillarBlock
 	@Override
 	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
 	{
-	    if(toolAction.equals(ToolActions.AXE_STRIP)) {
-	        if(state.is(BlockInit.GOLDEN_LOG.get())) {
-	            return BlockInit.STRIPPED_GOLDEN_LOG.get().withPropertiesOf(state);
-	        }
+	    if(toolAction.equals(ToolActions.AXE_STRIP))
+	    {
+    		if(state.is(BlockInit.GOLDEN_LOG.get()))
+    		{
+    			return BlockInit.STRIPPED_GOLDEN_LOG.get().withPropertiesOf(state);
+    		}
+    		else if(state.is(BlockInit.GOLDEN_WOOD.get()))
+    		{
+    			return BlockInit.STRIPPED_GOLDEN_WOOD.get().withPropertiesOf(state);
+    		}
 	    }
 
 	    return super.getToolModifiedState(state, context, toolAction, simulate);
