@@ -14,5 +14,5 @@ public class ParticlesInit
 	public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, GoldenExpansion.MOD_ID);
 	
 	// Register particles
-	public static final RegistryObject<SimpleParticleType> GOLDEN_PORTAL_PARTICLES = PARTICLE_TYPES.register("golden_portal_particles", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> GOLDEN_PORTAL_PARTICLES = PARTICLE_TYPES.register("golden_portal_particles", () -> new SimpleParticleType(true));
 }

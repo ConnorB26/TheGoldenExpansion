@@ -13,6 +13,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -35,7 +36,6 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Cancelable;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
 public class GoldenPortalBlock extends Block
 {
@@ -48,7 +48,7 @@ public class GoldenPortalBlock extends Block
         super(Properties.of(Material.PORTAL)
                 .strength(-1F)
                 .noCollission()
-                .lightLevel((state) -> 10)
+                .lightLevel((state) -> 12)
                 .noLootTable()
         );
         registerDefaultState(stateDefinition.any().setValue(AXIS, Direction.Axis.X));
@@ -112,8 +112,8 @@ public class GoldenPortalBlock extends Block
         }
         else
         {
-        	GoldenPortalBlock.Size KaupenPortalBlock$size1 = new Size(worldIn, pos, Direction.Axis.Z);
-            return KaupenPortalBlock$size1.isValid() && KaupenPortalBlock$size1.portalBlockCount == 0 ? KaupenPortalBlock$size1 : null;
+        	GoldenPortalBlock.Size PortalSize = new Size(worldIn, pos, Direction.Axis.Z);
+            return PortalSize.isValid() && PortalSize.portalBlockCount == 0 ? PortalSize : null;
         }
     }
 
@@ -124,8 +124,7 @@ public class GoldenPortalBlock extends Block
         Direction.Axis direction$axis = facing.getAxis();
         Direction.Axis direction$axis1 = stateIn.getValue(AXIS);
         boolean flag = direction$axis1 != direction$axis && direction$axis.isHorizontal();
-        return !flag && facingState.getBlock() != this && !(new Size(worldIn, currentPos, direction$axis1)).validatePortal() ?
-                Blocks.AIR.defaultBlockState() : super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return !flag && facingState.getBlock() != this && !(new Size(worldIn, currentPos, direction$axis1)).validatePortal() ? Blocks.AIR.defaultBlockState() : super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
@@ -164,15 +163,17 @@ public class GoldenPortalBlock extends Block
         }
     }
 
-	//@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand)
+	@OnlyIn(Dist.CLIENT)
+	@Override
+	public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand)
 	{
         if (rand.nextInt(100) == 0)
         {
             worldIn.playLocalSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.PORTAL_AMBIENT, SoundSource.BLOCKS, 0.5F, rand.nextFloat() * 0.4F + 0.8F, false);
         }
 
-        for(int i = 0; i < 4; ++i) {
+        for(int i = 0; i < 4; ++i)
+        {
             double x = (double)pos.getX() + rand.nextDouble();
             double y = (double)pos.getY() + rand.nextDouble();
             double z = (double)pos.getZ() + rand.nextDouble();
@@ -180,15 +181,17 @@ public class GoldenPortalBlock extends Block
             double ySpeed = ((double)rand.nextFloat() - 0.5D) * 0.5D;
             double zSpeed = ((double)rand.nextFloat() - 0.5D) * 0.5D;
             int j = rand.nextInt(2) * 2 - 1;
-            if (!worldIn.getBlockState(pos.west()).is(this) && !worldIn.getBlockState(pos.east()).is(this)) {
+            if (!worldIn.getBlockState(pos.west()).is(this) && !worldIn.getBlockState(pos.east()).is(this))
+            {
                 x = (double)pos.getX() + 0.5D + 0.25D * (double)j;
-                xSpeed = rand.nextFloat() * 2.0F * (float)j;
-            } else {
+                xSpeed = (double)(rand.nextFloat() * 2.0F * (float)j);
+            }
+            else
+            {
                 z = (double)pos.getZ() + 0.5D + 0.25D * (double)j;
-                zSpeed = rand.nextFloat() * 2.0F * (float)j;
+                zSpeed = (double)(rand.nextFloat() * 2.0F * (float)j);
             }
 
-            System.out.println("Spawning portal particles");
             worldIn.addParticle(ParticlesInit.GOLDEN_PORTAL_PARTICLES.get(), x, y, z, xSpeed, ySpeed, zSpeed);
         }
     }
