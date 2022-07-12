@@ -23,7 +23,7 @@ public class ModEnUsProvider extends LanguageProvider
 		// Items
 		add(ItemInit.FLINT_AND_GOLD.get(), "Flint and Gold");
 		add(ItemInit.GOLDEN_WHEAT.get(), "Golden Wheat");
-		add(ItemInit.GOLDEN_STICK.get(), "Golden Stick");
+		//add(ItemInit.GOLDEN_STICK.get(), "Golden Stick");
 		add(ItemInit.GOLDEN_BREAD.get(), "Golden Bread");
 		add(ItemInit.GOLDEN_POTATO.get(), "Golden Potato");
 		add(ItemInit.GOLDEN_BAKED_POTATO.get(), "Golden Baked Potato");

@@ -25,7 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		// Items
 		oneLayerItem(ItemInit.FLINT_AND_GOLD.get());
 		oneLayerItem(ItemInit.GOLDEN_WHEAT.get());
-		oneLayerItem(ItemInit.GOLDEN_STICK.get());
+		//oneLayerItem(ItemInit.GOLDEN_STICK.get());
 		oneLayerItem(ItemInit.GOLDEN_BREAD.get());
 		oneLayerItem(ItemInit.GOLDEN_BAKED_POTATO.get());
 		oneLayerItem(ItemInit.GOLDEN_BEETROOT.get());

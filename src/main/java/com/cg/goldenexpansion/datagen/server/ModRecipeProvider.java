@@ -36,7 +36,8 @@ public class ModRecipeProvider extends RecipeProvider
 		InventoryChangeTrigger.TriggerInstance hasGoldenPlanks = has(planks);
 		String hasGoldenPlanksString = "has_" + goldenPlanksPath;
 		
-		Item stick = ItemInit.GOLDEN_STICK.get();
+		//Item stick = ItemInit.GOLDEN_STICK.get();
+		Item stick = Items.STICK;
 		String stickPath = itemPath(stick);
 		InventoryChangeTrigger.TriggerInstance hasGoldenStick = has(stick);
 		String hasGoldenStickString = "has_" + stickPath;
@@ -64,11 +65,11 @@ public class ModRecipeProvider extends RecipeProvider
 			.unlockedBy("has_" + blockPath(BlockInit.STRIPPED_GOLDEN_LOG.get()), has(BlockInit.STRIPPED_GOLDEN_LOG.get()))
 			.group("bark")
 			.save(consumer);
-		ShapedRecipeBuilder.shaped(ItemInit.GOLDEN_STICK.get(), 4)
+		/*ShapedRecipeBuilder.shaped(ItemInit.GOLDEN_STICK.get(), 4)
 			.define('x', planks)
 			.pattern("x").pattern("x")
 			.unlockedBy(hasGoldenPlanksString, hasGoldenPlanks)
-			.save(consumer);
+			.save(consumer);*/
 		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_STAIRS.get(), 4)
 			.define('x', planks)
 			.pattern("x  ").pattern("xx ").pattern("xxx")

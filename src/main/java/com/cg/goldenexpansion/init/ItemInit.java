@@ -23,7 +23,7 @@ public class ItemInit
 	// Non plantable non-foods
 	public static final RegistryObject<Item> FLINT_AND_GOLD = register("flint_and_gold", () -> new FlintAndGold(goldenTab().stacksTo(1).defaultDurability(10)));
 	public static final RegistryObject<Item> GOLDEN_WHEAT = register("golden_wheat", () -> new Item(goldenTab()));
-	public static final RegistryObject<Item> GOLDEN_STICK = register("golden_stick", () -> new Item(goldenTab()));
+	//public static final RegistryObject<Item> GOLDEN_STICK = register("golden_stick", () -> new Item(goldenTab()));
 	public static final RegistryObject<Item> GOLDEN_SIGN = register("golden_sign", () -> new SignItem(goldenTab().stacksTo(16), BlockInit.GOLDEN_SIGN.get(), BlockInit.GOLDEN_WALL_SIGN.get()));
 	
 	// Non plantable foods
