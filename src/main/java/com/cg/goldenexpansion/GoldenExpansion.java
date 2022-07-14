@@ -5,6 +5,8 @@ import com.cg.goldenexpansion.init.BlockInit;
 import com.cg.goldenexpansion.init.ItemInit;
 import com.cg.goldenexpansion.init.POIsInit;
 import com.cg.goldenexpansion.init.ParticlesInit;
+import com.cg.goldenexpansion.world.biomemods.ModBiomeModifiers;
+import com.cg.goldenexpansion.world.feature.ModPlacedFeatures;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -34,13 +36,16 @@ public class GoldenExpansion
 	public GoldenExpansion()
 	{
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+				
 		ItemInit.ITEMS.register(modEventBus);
 		ItemInit.VANILLA_ITEMS.register(modEventBus);
 		BlockInit.BLOCKS.register(modEventBus);
 		BlockEntitiesInit.BLOCK_ENTITIES.register(modEventBus);
 		POIsInit.POI.register(modEventBus);
 		ParticlesInit.PARTICLE_TYPES.register(modEventBus);
+		
+		ModBiomeModifiers.BIOME_MODIFIERS.register(modEventBus);
+		ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
 		
 		MinecraftForge.EVENT_BUS.register(this);
 	}

@@ -1,0 +1,5 @@
+{
+	"type": "goldenexpansion:vegetal",
+	"biomes": "#minecraft:is_taiga",
+	"feature": "goldenexpansion:patch_blueberry"
+}

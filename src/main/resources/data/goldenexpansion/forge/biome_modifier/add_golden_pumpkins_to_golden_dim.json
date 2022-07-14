@@ -1,0 +1,5 @@
+{
+	"type": "goldenexpansion:vegetal",
+	"biomes": "#goldenexpansion:is_golden",
+	"feature": "goldenexpansion:patch_golden_pumpkin"
+}
