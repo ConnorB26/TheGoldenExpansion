@@ -1,4 +1,4 @@
-// 1.19	2022-07-09T22:20:44.4546675	Item Models: goldenexpansion
+// 1.19	2022-07-14T14:00:56.6847632	Item Models: goldenexpansion
 08246cf79e1222128ab232fee60194d79207cfd2 assets/goldenexpansion/models/item/blueberries.json
 6e76ea6bf0ca572fa40c1cbeb54c647cec81a67c assets/goldenexpansion/models/item/flint_and_gold.json
 9d5927b435d72747476e9a1cda60f27c1decfaa8 assets/goldenexpansion/models/item/golden_baked_potato.json
@@ -26,7 +26,6 @@ f741ecd7f32b450abba77a20ef6632fd5b21b33a assets/goldenexpansion/models/item/gold
 8de1f2451ace7a7fcc926449895510be8c273ef7 assets/goldenexpansion/models/item/golden_sign.json
 9120728ad94746ace2c230787d85263ca274527f assets/goldenexpansion/models/item/golden_slab.json
 39442110aa160f67a7434215b7db99dc726da840 assets/goldenexpansion/models/item/golden_stairs.json
-70e65949be4042cab9d7ab1fabf84074e06b47ef assets/goldenexpansion/models/item/golden_stick.json
 288ee1abf5c3ca80a57c66b6ae0e5338c7ef3455 assets/goldenexpansion/models/item/golden_sweet_berries.json
 229ae2e67a0b78edf6ca71b40e3f76a1b1b36f72 assets/goldenexpansion/models/item/golden_trapdoor.json
 dc94bd316d02cccea41d02271b534e21fac1679e assets/goldenexpansion/models/item/golden_wheat.json

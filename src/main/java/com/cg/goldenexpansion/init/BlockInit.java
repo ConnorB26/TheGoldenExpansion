@@ -1,17 +1,18 @@
 package com.cg.goldenexpansion.init;
 
 import com.cg.goldenexpansion.GoldenExpansion;
-import com.cg.goldenexpansion.block.GoldenMelon;
+import com.cg.goldenexpansion.block.plants.GoldenMelon;
 import com.cg.goldenexpansion.block.GoldenPortalBlock;
-import com.cg.goldenexpansion.block.GoldenPumpkin;
+import com.cg.goldenexpansion.block.plants.GoldenPumpkin;
+import com.cg.goldenexpansion.block.plants.GoldenStemBlock;
 import com.cg.goldenexpansion.block.StrippableBlock;
-import com.cg.goldenexpansion.block.bushes.BlueberryBushBlock;
-import com.cg.goldenexpansion.block.bushes.GoldenBlueberryBushBlock;
-import com.cg.goldenexpansion.block.bushes.GoldenSweetBerryBushBlock;
-import com.cg.goldenexpansion.block.crops.GoldenBeetrootBlock;
-import com.cg.goldenexpansion.block.crops.GoldenCarrotBlock;
-import com.cg.goldenexpansion.block.crops.GoldenPotatoBlock;
-import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
+import com.cg.goldenexpansion.block.plants.bushes.BlueberryBushBlock;
+import com.cg.goldenexpansion.block.plants.bushes.GoldenBlueberryBushBlock;
+import com.cg.goldenexpansion.block.plants.bushes.GoldenSweetBerryBushBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenBeetrootBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenCarrotBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenPotatoBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenWheatBlock;
 import com.cg.goldenexpansion.block.entity.ModStandingSignBlock;
 import com.cg.goldenexpansion.block.entity.ModWallSignBlock;
 import com.cg.goldenexpansion.block.entity.ModWoodTypes;
@@ -36,7 +37,6 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.block.StemGrownBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
@@ -62,13 +62,13 @@ public class BlockInit
 	public static final RegistryObject<Block> GOLDEN_SWEET_BERRY_BUSH = registerBlock("golden_sweet_berry_bush", () -> new GoldenSweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 	
 	public static final RegistryObject<Block> GOLDEN_MELON = register("golden_melon", () -> new GoldenMelon(BlockBehaviour.Properties.copy(Blocks.MELON)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_MELON_STEM = registerBlock("golden_melon_stem", () -> new StemBlock((StemGrownBlock)GOLDEN_MELON.get(),
+	public static final RegistryObject<Block> GOLDEN_MELON_STEM = registerBlock("golden_melon_stem", () -> new GoldenStemBlock((StemGrownBlock)GOLDEN_MELON.get(),
 			() -> ItemInit.GOLDEN_MELON_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.MELON_STEM)));
 	public static final RegistryObject<Block> ATTACHED_GOLDEN_MELON_STEM = registerBlock("attached_golden_melon_stem", () -> new AttachedStemBlock((StemGrownBlock)GOLDEN_MELON.get(),
 			() -> ItemInit.GOLDEN_MELON_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.ATTACHED_MELON_STEM)));
 	
 	public static final RegistryObject<Block> GOLDEN_PUMPKIN = register("golden_pumpkin", () -> new GoldenPumpkin(BlockBehaviour.Properties.copy(Blocks.MELON)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_PUMPKIN_STEM = registerBlock("golden_pumpkin_stem", () -> new StemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
+	public static final RegistryObject<Block> GOLDEN_PUMPKIN_STEM = registerBlock("golden_pumpkin_stem", () -> new GoldenStemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
 			() -> ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.PUMPKIN_STEM)));
 	public static final RegistryObject<Block> ATTACHED_GOLDEN_PUMPKIN_STEM = registerBlock("attached_golden_pumpkin_stem", () -> new AttachedStemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
 			() -> ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.ATTACHED_PUMPKIN_STEM)));

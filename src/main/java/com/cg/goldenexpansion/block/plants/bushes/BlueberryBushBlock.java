@@ -1,4 +1,4 @@
-package com.cg.goldenexpansion.block.bushes;
+package com.cg.goldenexpansion.block.plants.bushes;
 
 import com.cg.goldenexpansion.init.ItemInit;
 

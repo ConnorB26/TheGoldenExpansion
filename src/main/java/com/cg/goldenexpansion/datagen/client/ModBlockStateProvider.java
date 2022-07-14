@@ -1,10 +1,10 @@
 package com.cg.goldenexpansion.datagen.client;
 
 import com.cg.goldenexpansion.GoldenExpansion;
-import com.cg.goldenexpansion.block.crops.GoldenBeetrootBlock;
-import com.cg.goldenexpansion.block.crops.GoldenCarrotBlock;
-import com.cg.goldenexpansion.block.crops.GoldenPotatoBlock;
-import com.cg.goldenexpansion.block.crops.GoldenWheatBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenBeetrootBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenCarrotBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenPotatoBlock;
+import com.cg.goldenexpansion.block.plants.crops.GoldenWheatBlock;
 import com.cg.goldenexpansion.init.BlockInit;
 import com.google.common.base.Function;
 

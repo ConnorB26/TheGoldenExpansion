@@ -1,9 +1,8 @@
-package com.cg.goldenexpansion.block;
+package com.cg.goldenexpansion.block.plants;
 
 import com.cg.goldenexpansion.init.BlockInit;
 
 import net.minecraft.world.level.block.AttachedStemBlock;
-import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.block.StemGrownBlock;
 
 public class GoldenMelon extends StemGrownBlock
@@ -13,9 +12,9 @@ public class GoldenMelon extends StemGrownBlock
 		super(properties);
 	}
 
-	public StemBlock getStem()
+	public GoldenStemBlock getStem()
 	{
-		return (StemBlock)BlockInit.GOLDEN_MELON_STEM.get();
+		return (GoldenStemBlock)BlockInit.GOLDEN_MELON_STEM.get();
 	}
 	
 	public AttachedStemBlock getAttachedStem()

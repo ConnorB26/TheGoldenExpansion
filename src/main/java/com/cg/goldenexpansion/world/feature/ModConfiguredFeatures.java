@@ -2,18 +2,16 @@ package com.cg.goldenexpansion.world.feature;
 
 import java.util.List;
 
-import com.cg.goldenexpansion.block.bushes.BlueberryBushBlock;
-import com.cg.goldenexpansion.block.bushes.GoldenBlueberryBushBlock;
-import com.cg.goldenexpansion.block.bushes.GoldenSweetBerryBushBlock;
+import com.cg.goldenexpansion.block.plants.bushes.BlueberryBushBlock;
+import com.cg.goldenexpansion.block.plants.bushes.GoldenBlueberryBushBlock;
+import com.cg.goldenexpansion.block.plants.bushes.GoldenSweetBerryBushBlock;
 import com.cg.goldenexpansion.init.BlockInit;
 
-import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -47,8 +45,7 @@ public class ModConfiguredFeatures
 			FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.GOLDEN_PUMPKIN.get())), List.of(Blocks.GRASS_BLOCK)));
 	
 	public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_GOLDEN_MELON = FeatureUtils.register("patch_golden_melon", Feature.RANDOM_PATCH,
-			new RandomPatchConfiguration(64, 7, 3, PlacementUtils.filtered(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.GOLDEN_MELON.get())),
-					BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.matchesBlocks(Direction.DOWN.getNormal(), Blocks.GRASS_BLOCK)))));
+			FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.GOLDEN_MELON.get())), List.of(Blocks.GRASS_BLOCK)));
 	
 	public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_BLUEBERRY_BUSH = FeatureUtils.register("patch_blueberry_bush", Feature.RANDOM_PATCH,
 			FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.BLUEBERRY_BUSH.get().defaultBlockState()
