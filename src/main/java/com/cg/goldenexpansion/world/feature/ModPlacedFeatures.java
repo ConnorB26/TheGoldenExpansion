@@ -27,11 +27,11 @@ public class ModPlacedFeatures
 	
 	public static final RegistryObject<PlacedFeature> PATCH_GOLDEN_PUMPKIN = PLACED_FEATURES.register("patch_golden_pumpkin",
 			() -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>)
-			ModConfiguredFeatures.PATCH_GOLDEN_PUMPKIN, List.of(RarityFilter.onAverageOnceEvery(300), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+			ModConfiguredFeatures.PATCH_GOLDEN_PUMPKIN, List.of(RarityFilter.onAverageOnceEvery(100), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 	
 	public static final RegistryObject<PlacedFeature> PATCH_GOLDEN_MELON = PLACED_FEATURES.register("patch_golden_melon",
 			() -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>)
-			ModConfiguredFeatures.PATCH_GOLDEN_MELON, List.of(RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+			ModConfiguredFeatures.PATCH_GOLDEN_MELON, List.of(RarityFilter.onAverageOnceEvery(100), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 	
 	public static final RegistryObject<PlacedFeature> PATCH_BLUEBERRY = PLACED_FEATURES.register("patch_blueberry",
 			() -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>)
