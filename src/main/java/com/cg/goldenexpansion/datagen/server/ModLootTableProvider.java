@@ -21,6 +21,8 @@ public class ModLootTableProvider extends BaseLootTableProvider
 	{
 		// Drop self
 		dropSelf(BlockInit.GOLDEN_PUMPKIN.get());
+		dropSelf(BlockInit.GOLDEN_CARVED_PUMPKIN.get());
+		dropSelf(BlockInit.GOLDEN_JACK_O_LANTERN.get());
 		dropSelf(BlockInit.GOLDEN_SAPLING.get());
 		dropSelf(BlockInit.GOLDEN_LOG.get());
 		dropSelf(BlockInit.GOLDEN_WOOD.get());
@@ -33,9 +35,9 @@ public class ModLootTableProvider extends BaseLootTableProvider
 		dropSelf(BlockInit.GOLDEN_FENCE_GATE.get());
 		dropSelf(BlockInit.GOLDEN_SIGN.get());
 		dropSelf(BlockInit.GOLDEN_WALL_SIGN.get());
-		dropSelf(BlockInit.GOLDEN_DOOR.get());
-		dropSelf(BlockInit.GOLDEN_TRAPDOOR.get());
-		dropSelf(BlockInit.GOLDEN_PRESSURE_PLATE.get());
+		dropSelf(BlockInit.GOLDEN_WOODEN_DOOR.get());
+		dropSelf(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get());
+		dropSelf(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get());
 		dropSelf(BlockInit.GOLDEN_BUTTON.get());
 		dropSelf(BlockInit.GOLDEN_CRAFTING_TABLE.get());
 		

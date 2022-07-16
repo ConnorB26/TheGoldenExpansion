@@ -43,6 +43,11 @@ public class ModRecipeProvider extends RecipeProvider
 		String hasGoldenStickString = "has_" + stickPath;
 		
 		// Shaped Recipes
+		ShapedRecipeBuilder.shaped(ItemInit.GOLDEN_SHEARS.get())
+			.define('x', Items.GOLD_INGOT)
+			.pattern("x ").pattern(" x")
+			.unlockedBy("has_" + itemPath(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+			.save(consumer);
 		ShapedRecipeBuilder.shaped(ItemInit.GOLDEN_BREAD.get())
 			.define('x', ItemInit.GOLDEN_WHEAT.get())
 			.pattern("xxx")
@@ -52,6 +57,11 @@ public class ModRecipeProvider extends RecipeProvider
 			.define('x', Items.GLISTERING_MELON_SLICE)
 			.pattern("xxx").pattern("xxx").pattern("xxx")
 			.unlockedBy("has_" + itemPath(Items.GLISTERING_MELON_SLICE), has(Items.GLISTERING_MELON_SLICE))
+			.save(consumer);
+		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_JACK_O_LANTERN.get())
+			.define('x', Items.TORCH).define('p', BlockInit.GOLDEN_CARVED_PUMPKIN.get())
+			.pattern("p").pattern("x")
+			.unlockedBy("has_" + itemPath(Items.TORCH), has(Items.TORCH)).unlockedBy("has_" + blockPath(BlockInit.GOLDEN_CARVED_PUMPKIN.get()), has(BlockInit.GOLDEN_CARVED_PUMPKIN.get()))
 			.save(consumer);
 		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_WOOD.get(), 3)
 			.define('x', BlockInit.GOLDEN_LOG.get())
@@ -82,19 +92,19 @@ public class ModRecipeProvider extends RecipeProvider
 			.unlockedBy(hasGoldenPlanksString, hasGoldenPlanks)
 			.group("wooden_slab")
 			.save(consumer);
-		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_DOOR.get(), 3)
+		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_WOODEN_DOOR.get(), 3)
 			.define('x', planks)
 			.pattern("xx").pattern("xx").pattern("xx")
 			.unlockedBy(hasGoldenPlanksString, hasGoldenPlanks)
 			.group("wooden_door")
 			.save(consumer);
-		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_TRAPDOOR.get(), 2)
+		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get(), 2)
 			.define('x', planks)
 			.pattern("xxx").pattern("xxx")
 			.unlockedBy(hasGoldenPlanksString, hasGoldenPlanks)
 			.group("wooden_trapdoor")
 			.save(consumer);
-		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_PRESSURE_PLATE.get())
+		ShapedRecipeBuilder.shaped(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get())
 			.define('x', planks)
 			.pattern("xx")
 			.unlockedBy(hasGoldenPlanksString, hasGoldenPlanks)

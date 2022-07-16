@@ -26,12 +26,12 @@ public class ModItemTagsProvider extends ItemTagsProvider
 		tag(ItemTags.SIGNS).add(BlockInit.GOLDEN_SIGN.get().asItem());
 		tag(ItemTags.SAPLINGS).add(BlockInit.GOLDEN_SAPLING.get().asItem());
 		tag(ItemTags.WOODEN_BUTTONS).add(BlockInit.GOLDEN_BUTTON.get().asItem());
-		tag(ItemTags.WOODEN_DOORS).add(BlockInit.GOLDEN_DOOR.get().asItem());
+		tag(ItemTags.WOODEN_DOORS).add(BlockInit.GOLDEN_WOODEN_DOOR.get().asItem());
 		tag(ItemTags.WOODEN_FENCES).add(BlockInit.GOLDEN_FENCE.get().asItem());
-		tag(ItemTags.WOODEN_PRESSURE_PLATES).add(BlockInit.GOLDEN_PRESSURE_PLATE.get().asItem());
+		tag(ItemTags.WOODEN_PRESSURE_PLATES).add(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get().asItem());
 		tag(ItemTags.WOODEN_SLABS).add(BlockInit.GOLDEN_SLAB.get().asItem());
 		tag(ItemTags.WOODEN_STAIRS).add(BlockInit.GOLDEN_STAIRS.get().asItem());
-		tag(ItemTags.WOODEN_TRAPDOORS).add(BlockInit.GOLDEN_TRAPDOOR.get().asItem());
+		tag(ItemTags.WOODEN_TRAPDOORS).add(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get().asItem());
 		tag(ItemTags.LEAVES).add(BlockInit.GOLDEN_LEAVES.get().asItem());
 		
 		// Golden log tag

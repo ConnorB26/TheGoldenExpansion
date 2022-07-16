@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class BlockEntitiesInit
 {
 	// Setup deferred register
-	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, GoldenExpansion.MOD_ID);
+	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, GoldenExpansion.MOD_ID);
 	
 	// Signs
 	public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN_BLOCK_ENTITIES = BLOCK_ENTITIES.register("sign_block_entity",

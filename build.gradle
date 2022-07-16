@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.0'
+version = '1.02'
 group = 'com.cg.goldenexpansion'
 archivesBaseName = 'goldenexpansion'
 
@@ -90,7 +90,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19-41.0.87'
+    minecraft 'net.minecraftforge:forge:1.19-41.0.99'
 }
 
 jar {
@@ -98,7 +98,7 @@ jar {
         attributes([
                 "Specification-Title"     : "The Golden Expansion",
                 "Specification-Vendor"    : "Hockeyflame",
-                "Specification-Version"   : "1",
+                "Specification-Version"   : "1.01",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "Hockeyflame",

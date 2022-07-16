@@ -28,8 +28,8 @@ public class ModEventBusSubscriber
 	@SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event)
 	{
-		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_DOOR.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_TRAPDOOR.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_WOODEN_DOOR.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_PORTAL.get(), RenderType.translucent());
 		
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.GOLDEN_LEAVES.get(), RenderType.cutoutMipped());

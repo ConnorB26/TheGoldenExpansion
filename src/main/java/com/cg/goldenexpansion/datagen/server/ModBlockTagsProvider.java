@@ -28,12 +28,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider
 		tag(BlockTags.SAPLINGS).add(BlockInit.GOLDEN_SAPLING.get());
 		tag(BlockTags.FENCE_GATES).add(BlockInit.GOLDEN_FENCE_GATE.get());
 		tag(BlockTags.WOODEN_BUTTONS).add(BlockInit.GOLDEN_BUTTON.get());
-		tag(BlockTags.WOODEN_DOORS).add(BlockInit.GOLDEN_DOOR.get());
+		tag(BlockTags.WOODEN_DOORS).add(BlockInit.GOLDEN_WOODEN_DOOR.get());
 		tag(BlockTags.WOODEN_FENCES).add(BlockInit.GOLDEN_FENCE.get());
-		tag(BlockTags.WOODEN_PRESSURE_PLATES).add(BlockInit.GOLDEN_PRESSURE_PLATE.get());
+		tag(BlockTags.WOODEN_PRESSURE_PLATES).add(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get());
 		tag(BlockTags.WOODEN_SLABS).add(BlockInit.GOLDEN_SLAB.get());
 		tag(BlockTags.WOODEN_STAIRS).add(BlockInit.GOLDEN_STAIRS.get());
-		tag(BlockTags.WOODEN_TRAPDOORS).add(BlockInit.GOLDEN_TRAPDOOR.get());
+		tag(BlockTags.WOODEN_TRAPDOORS).add(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get());
 		tag(BlockTags.LEAVES).add(BlockInit.GOLDEN_LEAVES.get());
 		tag(BlockTags.FLOWER_POTS).add(BlockInit.POTTED_GOLDEN_SAPLING.get());
 		
@@ -56,6 +56,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider
 		// Mineable
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_MELON.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_PUMPKIN.get());
+		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_CARVED_PUMPKIN.get());
+		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_JACK_O_LANTERN.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_LOG.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_WOOD.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.STRIPPED_GOLDEN_LOG.get());
@@ -67,9 +69,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_FENCE_GATE.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_SIGN.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_WALL_SIGN.get());
-		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_DOOR.get());
-		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_TRAPDOOR.get());
-		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_PRESSURE_PLATE.get());
+		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_WOODEN_DOOR.get());
+		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get());
+		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_BUTTON.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(BlockInit.GOLDEN_CRAFTING_TABLE.get());
 	}

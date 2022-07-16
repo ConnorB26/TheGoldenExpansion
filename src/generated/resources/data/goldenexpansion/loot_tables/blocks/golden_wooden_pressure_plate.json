@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldenexpansion:golden_wooden_pressure_plate"
+        }
+      ],
+      "name": "golden_wooden_pressure_plate",
+      "rolls": 1.0
+    }
+  ]
+}

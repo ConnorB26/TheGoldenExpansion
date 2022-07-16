@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "item": "goldenexpansion:golden_carved_pumpkin"
+    },
+    "x": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "p",
+    "x"
+  ],
+  "result": {
+    "item": "goldenexpansion:golden_jack_o_lantern"
+  }
+}

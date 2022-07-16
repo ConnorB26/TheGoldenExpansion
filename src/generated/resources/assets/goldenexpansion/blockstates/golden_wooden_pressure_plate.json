@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "goldenexpansion:block/golden_wooden_pressure_plate"
+    },
+    "powered=true": {
+      "model": "goldenexpansion:block/golden_wooden_pressure_plate_down"
+    }
+  }
+}

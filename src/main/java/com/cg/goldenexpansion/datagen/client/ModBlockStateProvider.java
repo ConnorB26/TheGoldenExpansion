@@ -64,6 +64,8 @@ public class ModBlockStateProvider extends BlockStateProvider
 		horizontalBlock(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get(), models().getExistingFile(modLoc("block/attached_golden_melon_stem")));
 		simpleBlock(BlockInit.GOLDEN_MELON.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_MELON.get()), modLoc("block/golden_melon_side"), modLoc("block/golden_melon_top")));
 		simpleBlock(BlockInit.GOLDEN_PUMPKIN.get(), models().cubeColumn(getBlockPath(BlockInit.GOLDEN_PUMPKIN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_pumpkin_top")));
+		horizontalBlock(BlockInit.GOLDEN_CARVED_PUMPKIN.get(), models().orientable(getBlockPath(BlockInit.GOLDEN_CARVED_PUMPKIN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_carved_pumpkin"), modLoc("block/golden_pumpkin_top")));
+		horizontalBlock(BlockInit.GOLDEN_JACK_O_LANTERN.get(), models().orientable(getBlockPath(BlockInit.GOLDEN_JACK_O_LANTERN.get()), modLoc("block/golden_pumpkin_side"), modLoc("block/golden_jack_o_lantern"), modLoc("block/golden_pumpkin_top")));
 		
 		// Wood stuff
         simpleBlock(BlockInit.GOLDEN_LEAVES.get());
@@ -76,13 +78,13 @@ public class ModBlockStateProvider extends BlockStateProvider
         axisBlock((RotatedPillarBlock)BlockInit.STRIPPED_GOLDEN_WOOD.get(), modLoc("block/stripped_golden_log"), modLoc("block/stripped_golden_log"));
         signBlock((StandingSignBlock)BlockInit.GOLDEN_SIGN.get(), (WallSignBlock)BlockInit.GOLDEN_WALL_SIGN.get(), planksRL);
         buttonBlock((ButtonBlock)BlockInit.GOLDEN_BUTTON.get(), planksRL);
-        pressurePlateBlock((PressurePlateBlock)BlockInit.GOLDEN_PRESSURE_PLATE.get(), planksRL);
+        pressurePlateBlock((PressurePlateBlock)BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get(), planksRL);
         fenceBlock((FenceBlock)BlockInit.GOLDEN_FENCE.get(), planksRL);
         fenceGateBlock((FenceGateBlock)BlockInit.GOLDEN_FENCE_GATE.get(), planksRL);
         slabBlock((SlabBlock)BlockInit.GOLDEN_SLAB.get(), planksRL, planksRL);
         stairsBlock((StairBlock)BlockInit.GOLDEN_STAIRS.get(), planksRL);
-        trapdoorBlock((TrapDoorBlock)BlockInit.GOLDEN_TRAPDOOR.get(), blockTexture(BlockInit.GOLDEN_TRAPDOOR.get()), true);
-        doorBlock((DoorBlock)BlockInit.GOLDEN_DOOR.get(), modLoc("block/golden_door_bottom"), modLoc("block/golden_door_top"));
+        trapdoorBlock((TrapDoorBlock)BlockInit.GOLDEN_WOODEN_TRAPDOOR.get(), blockTexture(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get()), true);
+        doorBlock((DoorBlock)BlockInit.GOLDEN_WOODEN_DOOR.get(), modLoc("block/golden_wooden_door_bottom"), modLoc("block/golden_wooden_door_top"));
         
         models().getBuilder("block/golden_button_inventory").parent(models().getExistingFile(mcLoc("block/button_inventory"))).texture("texture", planksRL);
         models().getBuilder("block/golden_fence_inventory").parent(models().getExistingFile(mcLoc("block/fence_inventory"))).texture("texture", planksRL);

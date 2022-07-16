@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldenexpansion:block/golden_carved_pumpkin",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "goldenexpansion:block/golden_carved_pumpkin"
+    },
+    "facing=south": {
+      "model": "goldenexpansion:block/golden_carved_pumpkin",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "goldenexpansion:block/golden_carved_pumpkin",
+      "y": 270
+    }
+  }
+}

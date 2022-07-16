@@ -2,6 +2,7 @@ package com.cg.goldenexpansion.init;
 
 import com.cg.goldenexpansion.GoldenExpansion;
 import com.cg.goldenexpansion.item.FlintAndGold;
+import com.cg.goldenexpansion.item.GoldenShears;
 import com.google.common.base.Supplier;
 
 import net.minecraft.world.food.FoodProperties;
@@ -22,6 +23,7 @@ public class ItemInit
 	
 	// Non plantable non-foods
 	public static final RegistryObject<Item> FLINT_AND_GOLD = register("flint_and_gold", () -> new FlintAndGold(goldenTab().stacksTo(1).defaultDurability(10)));
+	public static final RegistryObject<Item> GOLDEN_SHEARS = register("golden_shears", () -> new GoldenShears(goldenTab().stacksTo(1).defaultDurability(10)));
 	public static final RegistryObject<Item> GOLDEN_WHEAT = register("golden_wheat", () -> new Item(goldenTab()));
 	//public static final RegistryObject<Item> GOLDEN_STICK = register("golden_stick", () -> new Item(goldenTab()));
 	public static final RegistryObject<Item> GOLDEN_SIGN = register("golden_sign", () -> new SignItem(goldenTab().stacksTo(16), BlockInit.GOLDEN_SIGN.get(), BlockInit.GOLDEN_WALL_SIGN.get()));

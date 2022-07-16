@@ -2,6 +2,8 @@
   "values": [
     "goldenexpansion:golden_melon",
     "goldenexpansion:golden_pumpkin",
+    "goldenexpansion:golden_carved_pumpkin",
+    "goldenexpansion:golden_jack_o_lantern",
     "goldenexpansion:golden_log",
     "goldenexpansion:golden_wood",
     "goldenexpansion:stripped_golden_log",
@@ -13,9 +15,9 @@
     "goldenexpansion:golden_fence_gate",
     "goldenexpansion:golden_sign",
     "goldenexpansion:golden_wall_sign",
-    "goldenexpansion:golden_door",
-    "goldenexpansion:golden_trapdoor",
-    "goldenexpansion:golden_pressure_plate",
+    "goldenexpansion:golden_wooden_door",
+    "goldenexpansion:golden_wooden_trapdoor",
+    "goldenexpansion:golden_wooden_pressure_plate",
     "goldenexpansion:golden_button",
     "goldenexpansion:golden_crafting_table"
   ]

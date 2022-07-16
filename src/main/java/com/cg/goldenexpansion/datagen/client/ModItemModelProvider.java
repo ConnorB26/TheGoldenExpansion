@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 	{
 		// Items
 		oneLayerItem(ItemInit.FLINT_AND_GOLD.get());
+		oneLayerItem(ItemInit.GOLDEN_SHEARS.get());
 		oneLayerItem(ItemInit.GOLDEN_WHEAT.get());
 		//oneLayerItem(ItemInit.GOLDEN_STICK.get());
 		oneLayerItem(ItemInit.GOLDEN_BREAD.get());
@@ -44,6 +45,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleBlockItem(BlockInit.GOLDEN_CRAFTING_TABLE.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_MELON.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_PUMPKIN.get().asItem());
+		simpleBlockItem(BlockInit.GOLDEN_CARVED_PUMPKIN.get().asItem());
+		simpleBlockItem(BlockInit.GOLDEN_JACK_O_LANTERN.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_LEAVES.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_LOG.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_WOOD.get().asItem());
@@ -52,14 +55,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 		simpleBlockItem(BlockInit.GOLDEN_PLANKS.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_STAIRS.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_SLAB.get().asItem());
-		simpleBlockItem(BlockInit.GOLDEN_PRESSURE_PLATE.get().asItem());
+		simpleBlockItem(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get().asItem());
 		simpleBlockItem(BlockInit.GOLDEN_FENCE_GATE.get().asItem());
 		
 		oneLayerItem(BlockInit.GOLDEN_SIGN.get().asItem());
-		oneLayerItem(BlockInit.GOLDEN_DOOR.get().asItem());
+		oneLayerItem(BlockInit.GOLDEN_WOODEN_DOOR.get().asItem());
 		oneLayerItem(BlockInit.GOLDEN_SAPLING.get().asItem());
 		
-		simpleBlockItem(BlockInit.GOLDEN_TRAPDOOR.get().asItem(), "_bottom");
+		simpleBlockItem(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get().asItem(), "_bottom");
 		simpleBlockItem(BlockInit.GOLDEN_BUTTON.get().asItem(), "_inventory");
 		simpleBlockItem(BlockInit.GOLDEN_FENCE.get().asItem(), "_inventory");
 		

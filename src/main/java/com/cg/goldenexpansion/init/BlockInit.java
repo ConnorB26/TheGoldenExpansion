@@ -1,6 +1,7 @@
 package com.cg.goldenexpansion.init;
 
 import com.cg.goldenexpansion.GoldenExpansion;
+import com.cg.goldenexpansion.block.plants.GoldenCarvedPumpkin;
 import com.cg.goldenexpansion.block.plants.GoldenMelon;
 import com.cg.goldenexpansion.block.GoldenPortalBlock;
 import com.cg.goldenexpansion.block.plants.GoldenPumpkin;
@@ -67,7 +68,9 @@ public class BlockInit
 	public static final RegistryObject<Block> ATTACHED_GOLDEN_MELON_STEM = registerBlock("attached_golden_melon_stem", () -> new AttachedStemBlock((StemGrownBlock)GOLDEN_MELON.get(),
 			() -> ItemInit.GOLDEN_MELON_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.ATTACHED_MELON_STEM)));
 	
-	public static final RegistryObject<Block> GOLDEN_PUMPKIN = register("golden_pumpkin", () -> new GoldenPumpkin(BlockBehaviour.Properties.copy(Blocks.MELON)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_PUMPKIN = register("golden_pumpkin", () -> new GoldenPumpkin(BlockBehaviour.Properties.copy(Blocks.PUMPKIN)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_CARVED_PUMPKIN = register("golden_carved_pumpkin", () -> new GoldenCarvedPumpkin(BlockBehaviour.Properties.copy(Blocks.CARVED_PUMPKIN)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_JACK_O_LANTERN = register("golden_jack_o_lantern", () -> new GoldenCarvedPumpkin(BlockBehaviour.Properties.copy(Blocks.JACK_O_LANTERN)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_PUMPKIN_STEM = registerBlock("golden_pumpkin_stem", () -> new GoldenStemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
 			() -> ItemInit.GOLDEN_PUMPKIN_SEEDS.get(), BlockBehaviour.Properties.copy(Blocks.PUMPKIN_STEM)));
 	public static final RegistryObject<Block> ATTACHED_GOLDEN_PUMPKIN_STEM = registerBlock("attached_golden_pumpkin_stem", () -> new AttachedStemBlock((StemGrownBlock)GOLDEN_PUMPKIN.get(),
@@ -87,9 +90,9 @@ public class BlockInit
 	public static final RegistryObject<Block> GOLDEN_SLAB = register("golden_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE = register("golden_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_FENCE_GATE = register("golden_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_DOOR = register("golden_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_TRAPDOOR = register("golden_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)), goldenBlockItem());
-	public static final RegistryObject<Block> GOLDEN_PRESSURE_PLATE = register("golden_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_WOODEN_DOOR = register("golden_wooden_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_WOODEN_TRAPDOOR = register("golden_wooden_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)), goldenBlockItem());
+	public static final RegistryObject<Block> GOLDEN_WOODEN_PRESSURE_PLATE = register("golden_wooden_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_BUTTON = register("golden_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_CRAFTING_TABLE = register("golden_crafting_table", () -> new CraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)), goldenBlockItem());
 	public static final RegistryObject<Block> GOLDEN_SIGN = registerBlock("golden_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.GOLDEN));

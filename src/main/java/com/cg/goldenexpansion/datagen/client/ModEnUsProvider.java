@@ -22,6 +22,7 @@ public class ModEnUsProvider extends LanguageProvider
 		
 		// Items
 		add(ItemInit.FLINT_AND_GOLD.get(), "Flint and Gold");
+		add(ItemInit.GOLDEN_SHEARS.get(), "Golden Shears");
 		add(ItemInit.GOLDEN_WHEAT.get(), "Golden Wheat");
 		//add(ItemInit.GOLDEN_STICK.get(), "Golden Stick");
 		add(ItemInit.GOLDEN_BREAD.get(), "Golden Bread");
@@ -50,6 +51,8 @@ public class ModEnUsProvider extends LanguageProvider
 		add(BlockInit.GOLDEN_MELON_STEM.get(), "Golden Melon Stem");
 		add(BlockInit.ATTACHED_GOLDEN_MELON_STEM.get(), "Golden Melon Stem");
 		add(BlockInit.GOLDEN_PUMPKIN.get(), "Golden Pumpkin");
+		add(BlockInit.GOLDEN_CARVED_PUMPKIN.get(), "Golden Carved Pumpkin");
+		add(BlockInit.GOLDEN_JACK_O_LANTERN.get(), "Golden Jack O' Lantern");
 		add(BlockInit.GOLDEN_PUMPKIN_STEM.get(), "Golden Pupmkin Stem");
 		add(BlockInit.ATTACHED_GOLDEN_PUMPKIN_STEM.get(), "Golden Pupmkin Stem");
 		add(BlockInit.GOLDEN_SAPLING.get(), "Golden Sapling");
@@ -64,9 +67,9 @@ public class ModEnUsProvider extends LanguageProvider
 		add(BlockInit.GOLDEN_SLAB.get(), "Golden Slab");
 		add(BlockInit.GOLDEN_FENCE.get(), "Golden Fence");
 		add(BlockInit.GOLDEN_FENCE_GATE.get(), "Golden Fence Gate");
-		add(BlockInit.GOLDEN_DOOR.get(), "Golden Door");
-		add(BlockInit.GOLDEN_TRAPDOOR.get(), "Golden Trapdoor");
-		add(BlockInit.GOLDEN_PRESSURE_PLATE.get(), "Golden Pressure Plate");
+		add(BlockInit.GOLDEN_WOODEN_DOOR.get(), "Golden Wooden Door");
+		add(BlockInit.GOLDEN_WOODEN_TRAPDOOR.get(), "Golden Wooden Trapdoor");
+		add(BlockInit.GOLDEN_WOODEN_PRESSURE_PLATE.get(), "Golden Wooden Pressure Plate");
 		add(BlockInit.GOLDEN_BUTTON.get(), "Golden Button");
 		add(BlockInit.GOLDEN_SIGN.get(), "Golden Sign");
 		add(BlockInit.GOLDEN_CRAFTING_TABLE.get(), "Golden Crafting Table");
